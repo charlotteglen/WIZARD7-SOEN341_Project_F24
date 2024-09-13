@@ -8,8 +8,7 @@
 
 ##  WIZARD7's Team members:
 
-![image](https://github.com/user-attachments/assets/a8b0429a-824f-454d-9e5c-a8d272f80045)
-(https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/graphs/contributors)
+![image]([https://github.com/user-attachments/assets/a8b0429a-824f-454d-9e5c-a8d272f80045](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/graphs/contributors))
 
 <br/>Charlotte Glen
 <br/>Ramiro Juarez

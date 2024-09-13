@@ -1,10 +1,10 @@
 # WIZARD7-SOEN341_Project_F24
 ## Objective
-
+  Design and execute a fidelity prototype that could serve as the basis for building a real product.
 ## Project
-A peer assessment project. The product will allow students to assess their peers in group projects by evaluating their teammates' contributions. 
-<br/>This system will require separate student and instructor login pages. Students will  evaluate each other based on cooperation, conceptual contribution, practical contribution, and work ethic on a seven-point scale.
-<br/>Instructors will have the ability to create teams and view the detailed peer evaluations, and export the results as a CSV file.
+  The primary goal of this project is to develop a high-fidelity prototype that can be seamlessly transformed into a functional product for the online marketplace. With the rapid advancement of technology, online shopping has become an essential service for many consumers. As a result, the demand for robust online platforms that support e-commerce continues to grow.
+
+<br/>This project aims to create a user-friendly interface (UI) that facilitates the sale of a wide range of real-life products while providing a satisfying browsing experience for users.
 
 ##  WIZARD7 Team members:
 <br/>Charlotte Glen

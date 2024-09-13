@@ -6,10 +6,12 @@
 
 <br/>This project aims to create a user-friendly interface (UI) that facilitates the sale of a wide range of real-life products while providing a satisfying browsing experience for users.
 
-##  WIZARD7 Team members:
+##  WIZARD7's Team members:
 <br/>Charlotte Glen
 <br/>Ramiro Juarez
 <br/>Jananaa Mahathevan
 <br/>Oceane Rakotomalala
 <br/>Youveng Sor
 <br/>Minh Tien Vu
+
+## Technologies

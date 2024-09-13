@@ -16,7 +16,8 @@
 <br/>Youveng Sor  SID:40222455  Github name: Youveng
 <br/>Minh Tien Vu SID:40044988  Github name: TimmyTwoTimes
 
-### Detailed log of each team member's contribution in sprint1: <br>
+### Detailed log of each team member's contribution in Sprint 1: <br>
+Planning for the first meeting by TIen Vu and Youveng. Time spent on task: 2hrs.
 Task breakdown by ... . The time spent on this task: . <br>
 Plans for the next sprint by ... . The time spent on this task:
 

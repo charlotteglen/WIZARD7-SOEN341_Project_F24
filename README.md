@@ -11,8 +11,8 @@
 <br/>Ramiro Juarez
 <br/>Jananaa Mahathevan
 <br/>Oceane Rakotomalala
-<br/>Youveng Sor  40222455  Github name: Youveng
-<br/>Minh Tien Vu  40044988  Github name: TimmyTwoTimes
+<br/>Youveng Sor  SID:40222455  Github name: Youveng
+<br/>Minh Tien Vu SID:40044988  Github name: TimmyTwoTimes
 
 ### Detailed log of each team member's contribution in sprint1: <br>
 Task breakdown by ... . The time spent on this task: . <br>

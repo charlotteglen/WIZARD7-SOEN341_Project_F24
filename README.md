@@ -7,6 +7,8 @@
 <br/>Instructors will have the ability to create teams view the detailed peer evaluations, and export the results as a CSV file.
 
 ##  WIZARD7's Team members:
+![image](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/graphs/contributors)
+
 <br/>Charlotte Glen
 <br/>Ramiro Juarez
 <br/>Jananaa Mahathevan

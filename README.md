@@ -29,7 +29,7 @@
 <br/>Charlotte Glen
 <br/>Ramiro Juarez
 <br/>Jananaa Mahathevan
-<br/>Oceane Rakotomalala
+<br/>Oceane Rakotomalala SID:40226514 Github name: Oceven
 <br/>Youveng Sor  SID:40222455  Github name: Youveng
 <br/>Minh Tien Vu SID:40044988  Github name: TimmyTwoTimes
 

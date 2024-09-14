@@ -15,7 +15,7 @@
 -  User Authentication: Students and Instructors can log in with distincted roles.
 -  Team Management: Instructors can create teams and enable to group the students.
 -  Peer Assessment: Students can rate their teammates annonymously on a scale of 7-points based on four key dimensions.
--  Automoated Score Sharing: Instructors received overall assessment results, and students receive anoymous peer feedback.
+-  Automated Score Sharing: Instructors received overall assessment results, and students receive anoymous peer feedback.
 -  Instrutor Dashboard: A dashboard for instructors to view detailed peer assessment results by each team and stuends with export functionality.
 
 ## 4 Assessment Dimensions:

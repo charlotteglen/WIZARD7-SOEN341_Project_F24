@@ -27,7 +27,7 @@
 ##  WIZARD7's Team members:
 [Contributions Insight:](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/graphs/contributors)
 <br/>Charlotte Glen
-<br/>Ramiro Juarez
+<br/>Ramiro Juarez SID: 40284034
 <br/>Jananaa Mahathevan
 <br/>Oceane Rakotomalala SID:40226514 Github name: Oceven
 <br/>Youveng Sor  SID:40222455  Github name: Youveng

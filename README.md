@@ -7,9 +7,7 @@
 ## Proposed Solution
   The Peer Assessment Application enables students to annonymously evaluate their teammates accross multiple dimensions, such as cooperation, conceptual contribution, practical contribution and work ethic. By providing a structured platform for feedback, the application supported fairness, accountability, and personal growth. Instructors can also use this application to monitor team dynamics and individual contribution and performance to help them make informed assessments.<br>
 ## Project Details
-  A peer assessment project. The product will allow students to assess their peers in group projects by evaluating their teammates' contributions. 
-<br/>This system will require separate student and instructor login pages. Students will evaluate each other on a seven-point scale based on the four key dimensions: cooperation, conceptual contribution, practical contribution, and work ethic.
-<br/>Instructors will have the ability to create teams view the detailed peer evaluations, and export the results as a CSV file.
+  A peer assessment project. The product will allow students to assess their peers in group projects by evaluating their teammates' contributions. This system will require separate student and instructor login pages. Students will evaluate each other on a seven-point scale based on the four key dimensions: cooperation, conceptual contribution, practical contribution, and work ethic. Instructors will have the ability to create teams view the detailed peer evaluations, and export the results as a CSV file.
 
 ## Features
 -  User Authentication: Students and Instructors can log in with distincted roles.

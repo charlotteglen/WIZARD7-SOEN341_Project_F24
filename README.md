@@ -39,5 +39,7 @@
 -  User Authentication: Implement a login system with roles of students and instructors.
 -  Team Management: Functionality for instructors to create teams and assign students to specific groups and ensure teams are visible to both students and instructors.
 
+
+=======
 ## How to run the project (To be continued)
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

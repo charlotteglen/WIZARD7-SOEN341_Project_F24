@@ -1,0 +1,32 @@
+<?php
+session_start();
+
+//include required files
+include("connection.php");
+include("functions.php");
+
+//variable for user data 
+//to chech if user is logged in
+$user_data = check_login($con);
+
+
+   // $_SESSION; //superglobal variable
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+
+    <h1>This is the index page</h1>
+    <a href="logout.php">Log out</a>
+
+    <br>
+    Hello, Username.
+</body>
+</html>

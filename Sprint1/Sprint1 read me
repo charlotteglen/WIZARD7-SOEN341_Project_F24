@@ -1,0 +1,4 @@
+
+-download XAMPP
+-Open C:\xampp\apache\conf\httpd.conf file change the DocumentRoot 
+-Create your database, name it: login_sample_db

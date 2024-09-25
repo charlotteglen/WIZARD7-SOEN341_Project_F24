@@ -22,11 +22,11 @@ $user_data = check_login($con);
     <title>My Website</title>
 </head>
 <body>
-
+    <a href="logout.php">Log out</a><br>
     <h1>This is the index page</h1>
-    <a href="logout.php">Log out</a>
+    
 
     <br>
-    Hello, Username.
+    Hello, <?php echo $user_data['username'];  ?>.
 </body>
 </html>

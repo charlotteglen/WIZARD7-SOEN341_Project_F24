@@ -1,0 +1,19 @@
+Attendees & ID:
+Charlotte Glen SID: 40166725 Github name: charlotteglen
+Ramiro Juarez SID: 40284034 Github name: CbyRam
+Jananaa Mahathevan SID: 40211352
+Oceane Rakotomalala SID:40226514 Github name: Oceven
+Youveng Sor  SID:40222455  Github name: Youveng
+Minh Tien Vu SID:40044988  Github name: TimmyTwoTimes
+
+
+Meeting Duration: ~2 hours
+Meeting Took-Place: Sept. 26, 2024
+Meeting Details:
+- decided frontend styling and layout
+- discussed backend development for student to view teams and instructors to create team
+Next Step:
+- Finish:
+    - functionality for instructors to create teams and assign students to specific groups
+    - functionality for students to view teams created by instructors
+    - frontend of login, student dashboard and instructor's dashboard

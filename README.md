@@ -30,7 +30,7 @@
 [Contributions Insight:](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/graphs/contributors)
 <br/>Charlotte Glen SID: 40166725 Github name: charlotteglen -> Frontend Developer
 <br/>Ramiro Juarez SID: 40284034 Github name: CbyRam -> Frontend Developer
-<br/>Jananaa Mahathevan SID: 40211352 Github name: ???? -> Frontend Developer
+<br/>Jananaa Mahathevan SID: 40211352 Github name: jananaa -> Frontend Developer
 <br/>Oceane Rakotomalala SID:40226514 Github name: Oceven -> Backend Developer
 <br/>Youveng Sor  SID:40222455  Github name: Youveng -> Backend Developer
 <br/>Minh Tien Vu SID:40044988  Github name: TimmyTwoTimes -> Backend Developer

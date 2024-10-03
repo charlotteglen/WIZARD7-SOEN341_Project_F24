@@ -46,6 +46,7 @@ include("connect.php");
         <table>
             <thead>
                 <tr><!-- This code set up the header of the table -->
+                    <th>Student ID</th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Role</th>
@@ -59,6 +60,7 @@ include("connect.php");
                 
                 while($user = mysqli_fetch_array($allUsersQuery)){
                     echo "<tr>";
+                    echo "<td>" . $user['studentid'] . "</td>";
                     echo "<td>" . $user['firstName'] . "</td>";
                     echo "<td>" . $user['lastName'] . "</td>";
                     echo "<td>" . $user['role'] . "</td>";
@@ -89,11 +91,14 @@ include("connect.php");
           <div class="input-group">
             <label for="userName">Enter the Student's group:</label>
               <i class="fas fa-user"></i>
-              <input type="text" name="" id="group" placeholder="User Group" required>
+              <input type="text" name="group" id="group" placeholder="User Group" required>
           </div>
+          <input type="submit" class="btn" value="Submit" name="submit">
         </form>
        
       </div>
+
+
 
 </body>
 </html>

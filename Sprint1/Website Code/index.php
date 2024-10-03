@@ -26,13 +26,20 @@
             <input type="text" name="userName" id="userName" placeholder="User Name" required>
             <label for="userName">User Name</label>
         </div>
+
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="studentid" id="studentid" placeholder="Student Id" required>
+            <label for="studentid">Enter Student ID</label>
+        </div>
+
         <div class="input-group">
             <i class="fas fa-lock"></i>
             <input type="password" name="password" id="password" placeholder="Password" required>
             <label for="password">Password</label>
         </div>
         <div class="input-group">
-            <p>Are you a student or teacher?:</p>
+            <p>Choose a role:</p>
             
                 <select name="roles" id="roles">
                 <option value="student">Student</option>

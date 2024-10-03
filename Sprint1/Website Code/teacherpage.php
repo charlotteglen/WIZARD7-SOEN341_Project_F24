@@ -73,19 +73,13 @@ include("connect.php");
       <a href="logout.php">Logout</a>
     </div>
 
-    <div class="container" id="changeGroup">
+    <div class="container" id="change">
         <h1 class="form-title">Assigning a student to a Group:</h1>
         <form method="post" action="register.php">
         <div class="input-group">
-            <label for="fname">Enter Student's First Name:</label>
-           <i class="fas fa-user"></i>
-           <input type="text" name="fName" id="fName" placeholder="First Name" required>
-          
-        </div>
-        <div class="input-group">
-        <label for="lName">Enter Student's Last Name:</label>
+        <label for="studentid">Enter the Student ID:</label>
             <i class="fas fa-user"></i>
-            <input type="text" name="lName" id="lName" placeholder="Last Name" required>
+            <input type="text" name="studentid" id="studentid" placeholder="Student Id" required>
             
         </div>
           <div class="input-group">
@@ -93,7 +87,7 @@ include("connect.php");
               <i class="fas fa-user"></i>
               <input type="text" name="group" id="group" placeholder="User Group" required>
           </div>
-          <input type="submit" class="btn" value="Submit" name="submit">
+          <input type="submit" class="btn" value="Change" name="change">
         </form>
        
       </div>

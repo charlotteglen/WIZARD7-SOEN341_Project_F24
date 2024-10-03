@@ -57,23 +57,36 @@ if(isset($_POST['signIn'])){
 }
 
 if(isset($_POST['changeGroup'])){
-    $firstName=$_POST['fName'];
-    $lastName=$_POST['lName'];
+    $studentid=$_POST['studentid'];
     $group=$_POST['group'];
   
     
-    $sql="SELECT * FROM users WHERE fName='$firstName' and lName='$lastName'";
-    
-    $result=$conn->query($sql);
-    if($result->num_rows>0){
-        $insertQuery="INSERT INTO users(group)
-                       VALUES ('$group')";
-        echo "Success ! <br> <a href='teacherpage.php'>Return to the teacher</a></br>";
-     }
-     else{
-        echo "Not Found, Ivalid information! <br> <a href='teacherpage.php'>Return to the teacher page </a></br>";
-     }
+  
  
  }
+
+ if(isset($_POST['change'])){
+    $studentid = $_POST['studentid'];
+    $group = $_POST['group'];
+
+    // Check if the student exists in the database
+    $checkStudent = "SELECT * FROM users WHERE studentid = '$studentid'";
+    $result = $conn->query($checkStudent);
+
+    if($result->num_rows > 0){
+        // Student exists, update their group
+        $updateGroup = "UPDATE users SET `group` = '$group' WHERE studentid = '$studentid'";
+
+        if($conn->query($updateGroup) === TRUE){
+            echo "Group assigned successfully! <br> <a href='teacherpage.php'>Return to the teacher page! </a></br>";
+        } else {
+            echo "Error Unable to change student group! <br> <a href='teacherpage.php'>Return to the teacher page! </a></br>";
+        }
+    } else {
+        echo "Student ID not found!<br> <a href='teacherpage.php'>Return to the teacher page! </a></br>";
+    }
+}
+
+
 
 ?>

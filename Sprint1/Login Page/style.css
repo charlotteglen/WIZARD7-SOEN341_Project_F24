@@ -1,0 +1,246 @@
+/* login page css */
+
+/* applies to all */
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* background colour */
+body
+{
+    background-color: white;
+    background:linear-gradient(to bottom, #25383E, #25383E);
+}
+
+/* wrapper div */
+.wrapper 
+{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+/* div title */
+.title
+{
+    float: left;
+    text-align: center;
+    margin-left: 100px;
+}
+
+/* h1: Peer Assessment title */
+.h1
+{
+    color: white;
+    border-bottom: 5px solid white;
+    font-size: 50px;
+}
+
+/* h2: sign in or create an account */
+.h2
+{
+   color: #CAE1C4;
+   padding-top: 5px;
+   font-size: 37px;
+}
+
+/* container */
+.container
+{
+    float: right;
+    color: white;
+    width:450px;
+    padding:1.5rem;
+    margin:50px auto;
+    margin-right: 150px;
+    border-radius:10px;
+    flex-direction: column;
+}
+
+/* container of Sign in */
+.container-SignIn
+{
+    background: #5FAEA9;
+    box-shadow:0 20px 35px rgba(0, 34, 37, 0.9);
+}
+
+/* container of Sign Up */
+.container-SignUp
+{
+    background: #AF878D;
+    box-shadow:0 20px 25px rgba(0, 34, 37, 0.9);
+}
+
+form
+{
+    margin:1rem 2rem;
+}
+
+/* form title style */
+.form-title
+{
+    font-size: 35px;;
+    font-weight:bold;
+    text-align:center;
+    padding:1rem;
+}
+
+/* form inputs */
+input 
+{
+    border: none; 
+    outline: none; 
+    width: 100%; 
+    padding-left: 40px; 
+    padding-top: 20px;
+    padding-right: 15px;
+    font-size: 20px; 
+    color: #25383E; 
+    background-color: transparent; 
+}
+
+.input-group 
+{
+    position: relative;
+    margin-bottom: 20px; 
+    border: 1px solid white; 
+    border-radius: 10px; 
+    background-color: white;
+}
+
+/* icons */
+.input-group i 
+{
+    position: absolute; 
+    left: 15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #25383E; 
+}
+
+/* inputs focus */
+.input-group:focus-within
+{
+    background-color: white;
+    outline:transparent;
+    border:2px solid #25383E;
+}
+
+input::placeholder
+{
+    color:transparent;
+}
+
+/* input labels */
+label
+{
+    color: #25383E;
+    position:relative;
+    left: 40px;
+    top:-1.3em;
+    cursor:auto;
+    transition:0.3s ease all;
+}
+
+input:focus~label,
+input:not(:placeholder-shown) ~ label
+{
+    /* hides label when focused */
+    opacity: 0;
+}
+
+/* sign in or sign up submit button for form */
+.btn
+{
+    font-size:1.1rem;
+    padding:8px 0;
+    border-radius:5px;
+    outline:none;
+    border:none;
+    width:100%;
+    background: #25383E;
+    color:white;
+    cursor:pointer;
+    transition:0.9s;
+}
+
+.btn:hover
+{
+    background:#000000;
+}
+
+
+/* sign in or create an account buttons */
+.links
+{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 30px;;
+    font-weight: bold;
+}
+
+button
+{
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-size:30px;
+    font-weight: bold;
+}
+
+/* sign in button background colour */
+.signInButton
+{
+    border-color: #5FAEA9;
+    background-color: #5FAEA9;
+}
+
+/* sign up button background colour */
+.signUpButton
+{
+    border-color: #AF878D;
+    background-color: #AF878D;
+}
+
+/* hover sign in and sign up buttons*/
+.signInButton:hover
+{
+    color: #5FAEA9;
+    background-color: white;
+    border-color: #5FAEA9;
+}
+
+.signUpButton:hover
+{
+    color: #AF878D;
+    background-color: white;
+    border-color: #AF878D;
+}
+
+/* role */
+.role
+{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+/* select for role */
+select
+{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #25383E;
+    background-color: white;
+    border: 3px solid white;
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+}

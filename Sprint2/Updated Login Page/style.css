@@ -1,0 +1,254 @@
+/* login page css */
+
+/* applies to all */
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Open Sans';
+}
+
+/* body */
+body
+{
+    background-color: #003C1F;
+    height: 100vh;
+}
+
+/* wrapper div */
+.wrapper 
+{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+/* background image */
+.bg-img
+{
+    z-index: 1;
+    width: 69.8%;
+    height: 65%;
+    top: 20;
+    left: 0;
+    position: absolute;
+    background-image: url('https://cdn.pixabay.com/photo/2023/09/17/19/10/building-8259184_1280.jpg'); opacity: 0.5;
+    background-size: cover;  
+}
+
+.bg
+{
+    z-index: 1;
+    width: 69.8%;
+    height: 65%;
+    top: 20;
+    left: 0;
+    position: absolute;
+    background-color: white;
+    z-index: -1;
+}
+/* div title */
+.title
+{   
+    z-index: 2;
+    position: relative;
+    float: left;
+    text-align: center;
+    padding: 100px;
+    margin-left: 180px;
+}
+
+/* h1: Peer Assessment title */
+.h1
+{
+    color: #003C1F;
+    font-size: 50px;
+}
+
+/* h2: sign in or create an account */
+.h2
+{
+   color: black;
+   font-size: 30px;
+   font-weight: lighter;
+}
+
+/* container of sign in and sign up */
+.container
+{
+    float: right;
+    color: #003C1F;
+    width:450px;
+    height: 65%;
+    padding:1.5rem;
+    margin:50px auto;
+    margin-right: 0;
+    flex-direction: column;
+    background: white;
+}
+
+/* form */
+form
+{
+    margin: 0.1rem 2rem;
+}
+
+/* form title style */
+.form-title
+{
+    font-size: 30px;;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* welcome back title */
+.welcome
+{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 90px;
+}
+
+/* form inputs */
+input 
+{
+    border: none; 
+    outline: none; 
+    width: 100%; 
+    padding-right: 20px;
+    padding-left: 40px;
+    top: -10px;
+    font-size: 15px; 
+    color: #003C1F; 
+    background-color: transparent; 
+    transform: translateY(10px);
+}
+
+/* container for inputs */
+.input-group 
+{
+    position: relative;
+    margin-bottom: 10px; 
+    border-radius: 10px; 
+    background-color: rgb(210, 210, 210);
+}
+
+/* icons */
+.input-group i 
+{
+    position: absolute; 
+    font-size: 15px;
+    left: 15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #003C1F; 
+}
+
+/* inputs focus */
+.input-group:focus-within
+{
+    background-color: white;
+    outline:transparent;
+    border:1px solid #003C1F;
+}
+
+input::placeholder
+{
+    color:transparent;
+}
+
+/* input labels */
+label
+{
+    color: #003C1F;
+    position:relative;
+    font-size: 15px;
+    left: 40px;
+    top: -11px;
+    cursor:auto;
+    transition:0.3s ease all;
+}
+
+input:focus~label,
+input:not(:placeholder-shown) ~ label
+{
+    /* hides label when focused */
+    opacity: 0;
+}
+
+/* sign in or sign up submit button for form */
+.btn
+{
+    font-size: 15px;
+    font-weight: bolder;
+    padding:8px 0;
+    border-radius:5px;
+    outline:none;
+    border:none;
+    width:100%;
+    background: #003C1F;
+    color: white;
+    cursor:pointer;
+    transition:0.9s;
+}
+
+.btn:hover
+{
+    background: #498066;
+}
+
+
+/* sign in and sign up button to toggle between it */
+/* sign in or create an account buttons */
+.links
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    font-weight: lighter;
+}
+
+button
+{
+    color: white;
+    padding: 5px 25px 5px 25px;
+    font-size:19px;
+    font-weight: lighter;
+    background-color: #003C1F;
+    border: none;
+}
+
+/* hover sign in and sign up buttons*/
+button:hover
+{
+    color: #003C1F;
+    background-color: white;
+}
+
+/* student or teacher */
+/* role */
+.role
+{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+
+}
+
+/* select for role */
+select
+{
+    margin-top: 10px;
+    padding: 3px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #003C1F;
+    background-color: rgb(210, 210, 210);
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+}

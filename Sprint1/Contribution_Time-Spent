@@ -1,8 +1,48 @@
-Ramiro Juarez: -Made the page with team name, team members and their student IDs as well as a link to the repository | Time Spent: 5 minutes
+ST : GitHub set up and initialization
+Issue#: ST
+Responsible: All members
+User Story Tasks:
+Make ReadMe file – Assigned to: Youveng & TimmyTwoTimes, Time Spent: 2 hours
+Make directories for each sprint – Assigned to: charlotteglen & jananaa, Time Spent: 1.5 hours
+Each directory has a meeting minutes file – Assigned to: CbyRam, Time Spent: 1 hour
+Each directory has a member contribution file – Assigned to: Oceven, Time Spent: 1 hour
 
-Oceane Rakotomalala, Minh Tien Vu: -Login HTML and CSS draft, Set up draft Database and table | Time spent: 3 hour
 
-Oceane Rakotomalala, Minh Tien Vu and Youveng Sor: -Functional Login and Sign up Pages draft | Time spent: 8 hours
+PL : Sprint Planning
+Issue#: PL
+Responsible: All members
+User Story Tasks:
+Add User Stories – Assigned to: Youveng, TimmyTwoTimes & Oceven, Time Spent: 3 hours
+Break down tasks derived from User Stories – Assigned to: charlotteglen, jananaa & CbyRam, Time Spent: 2.5 hours
 
-Youveng Sor: -readMe files for homepage and Wiki Sprint 1 | Time spent: 3 hours
 
+US1 : Functionality for instructors to create teams and assign students to specific groups
+Issue#: UT1.2
+Responsible: All members
+User Story Tasks:
+Create login page – Assigned to: charlotteglen, jananaa & CbyRam, Time Spent: 4 hours
+Create database to make the login functional – Assigned to: Youveng, TimmyTwoTimes & Oceven, Time Spent: 5 hours
+Create teacher dashboard – Assigned to: charlotteglen, jananaa & CbyRam, Time Spent: 3.5 hours
+Add option to create groups and assign students to them – Assigned to: Youveng, TimmyTwoTimes & Oceven, Time Spent: 3 hours
+Add option to create a course roster by uploading a CSV file – Assigned to: Youveng, TimmyTwoTimes & Oceven, Time Spent: 2.5 hours
+
+
+US2 : Ensure teams are visible to both students and instructors
+Issue#: UT1.3
+Responsible: charlotteglen, jananaa & CbyRam
+User Story Tasks:
+Same layout as the teacher page but without the option to create or change teams – Assigned to: charlotteglen, jananaa & CbyRam, Time Spent: 3 hours
+
+
+DB : Database Creation
+Issue#: DB.1
+Responsible: Youveng, TimmyTwoTimes & Oceven
+User Story Tasks:
+Research and implement XAMPP – Assigned to: Youveng, TimmyTwoTimes & Oceven, Time Spent: 6 hours
+
+
+DB : Database Testing
+Issue#: DB.2
+Responsible: charlotteglen, jananaa & CbyRam
+User Story Tasks:
+Same layout as the teacher page but without the option to create or change teams – Assigned to: charlotteglen, jananaa & CbyRam, Time Spent: 2 hours

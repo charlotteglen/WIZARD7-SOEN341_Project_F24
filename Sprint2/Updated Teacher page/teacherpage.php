@@ -16,6 +16,7 @@ include("connect.php");
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <!--font-->
 </head>
+
 <body>
   <!--welcome banner -->
     <div id = "welcome">
@@ -31,42 +32,14 @@ include("connect.php");
        ?> </h2>
 
       <h3 style=font-size:30px>Instructor Dashboard</h3>
+
+      <div class = "changepage">
+      <form action="manageteams.php" method="get">
+        <button class="button-3" role="button">Manage Teams</button>
+      </form>
       </div>
-
-      <!--content wrapper to display team assignment and table side by side-->
-
-      <div class ="content-wrapper">
-      <!--student information table all students-->
       
-      <div class="infotable" id="infoTable">
-      <h2 style = padding:12px;text-align:center>Student Information</h2>
-
-        <table id ="students">
-            <thead>
-                <tr>
-                    <th>Team</th>
-                    <th>Name</th>
-                    <th>Student ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $allUsersQuery = mysqli_query($conn, "SELECT * FROM `users` WHERE `role` = 'student'");
-                
-                while($user = mysqli_fetch_array($allUsersQuery)){
-                    echo "<tr>";
-                    echo "<td>" . $user['team'] . "</td>";
-                    echo "<td>" . $user['firstName'] . " " . $user['lastName'] . '</td>';
-                    echo "<td>" . $user['studentid'] . '</td>';
-                    echo "</tr>";
-                }
-                ?>
-            </tbody>
-        </table>
-        </div>
-
-
-        <!-- separate table for each team -->
+      </div>
 
         <div class = "teamtable" id="teamTable">
         <?php
@@ -74,14 +47,13 @@ include("connect.php");
         $teamQuery = mysqli_query($conn, "SELECT DISTINCT team FROM `users` WHERE `role` = 'student'");
         while ($teamRow = mysqli_fetch_array($teamQuery)) {
           $teamNumber = $teamRow['team'];
-          
+
           echo "<h3>Team $teamNumber</h3>";
 
             echo "<table id='team-$teamNumber' ;'>
                     
                     <thead>
                         <tr>
-                            <th>Team</th>
                             <th>Name</th>
                             <th>Student ID</th>
                         </tr>
@@ -91,7 +63,6 @@ include("connect.php");
             $teamUsersQuery = mysqli_query($conn, "SELECT * FROM `users` WHERE `role` = 'student' AND `team` = '$teamNumber'");
             while($user = mysqli_fetch_array($teamUsersQuery)){
                 echo "<tr>";
-                echo "<td>" . $user['team'] . "</td>";
                 echo "<td>" . $user['firstName'] . " " . $user['lastName'] . "</td>";
                 echo "<td>" . $user['studentid'] . "</td>";
                 echo "</tr>";
@@ -102,44 +73,6 @@ include("connect.php");
     
     </div>
     
-
-    <div class="team-creation" id="teamCreation">
-        <h2 style=text-align:center;padding:10px>Create Teams</h2>
-
-        <div class="assign-method">
-        <form method="post" action="register.php">
-        <p style=font-weight:bold>Assign Manually</p>
-
-        <div class="input-group">
-            <label for="fname">Enter Student's ID:</label>
-            <i class="fas fa-user"></i>
-           <input type="text" name="studentid" id="studentid" placeholder="Student Id" required>
-        </div>
-
-          <div class="input-group">
-            <label for="userName">Enter the Student's Team Number:</label>
-              <i class="fas fa-user"></i>
-              <input type="number" step="1" name="team" id="team" placeholder="User Team" required min="1">
-          </div>
-
-        <form method= post action = "register.php">
-          <button>Assign Student</button>
-        </form>
-
-        </form>
-
-      </div>
-
-      <div class="assign-method">
-        <p style= font-weight:bold>Upload class CSV file</p>
-        <form action="#">
-          <input type="file" id="myFile" name="filename">
-          <input type="submit">
-        </form>
-      </div>
-
-      </div>
-
     </div>
 
     <div class="logout">

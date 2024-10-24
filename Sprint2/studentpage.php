@@ -1,12 +1,12 @@
 <?php
-session_start();
-include("connect.php");
+session_start(); // Start session to track logged-in user
+include("connect.php"); // Include database connection
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,59 +18,153 @@ include("connect.php");
             border-collapse: collapse;
             text-align: left;
         }
-        th, td {
+
+        th,
+        td {
             padding: 12px;
             border: 1px solid #ddd;
         }
+
         th {
             background-color: #f2f2f2;
         }
     </style>
+    <link rel="stylesheet" href="studentpage.css">
 </head>
-<body> <!-- creating the student login page-->
+
+<body>
     <div style="text-align:center; padding:15%;">
-      <p  style="font-size:50px; font-weight:bold;">
-       Welcome student <?php 
-       if(isset($_SESSION['userName'])){
-        $userName=$_SESSION['userName'];
-        $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.userName='$userName'");
-        while($row=mysqli_fetch_array($query)){
-            echo $row['firstName'].' '.$row['lastName'];
-        }
-       }
-       ?>
-      !
-      </p>
-      <h2>User Information Table</h2>
-        
+        <p style="font-size:50px; font-weight:bold;">
+            Welcome student
+            <?php
+            if (isset($_SESSION['userName'])) {
+                $userName = $_SESSION['userName'];
+
+                // Get the logged-in student's details
+                $query = mysqli_query($conn, "SELECT * FROM `users` WHERE userName = '$userName' AND role = 'student'");
+                $user = mysqli_fetch_array($query);
+
+                // If the user is found, display their name
+                if ($user) {
+                    $userGroup = $user['group']; // Store the student's group
+                    echo $user['firstName'] . ' ' . $user['lastName'];
+                } else {
+                    // If the user is not a student, redirect or show an error (optional handling)
+                    echo "Unauthorized access.";
+                    exit;
+                }
+            }
+            ?>
+        </p>
+
+        <h2>User Information Table</h2>
+
         <table>
             <thead>
-                <tr><!-- This code set up the header of the table -->
+                <tr>
                     <th>Student ID</th>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Role</th>
                     <th>Group</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                // Fetch all users from the database and put them into the table
-                $allUsersQuery = mysqli_query($conn, "SELECT * FROM `users`");
-                
-                while($user = mysqli_fetch_array($allUsersQuery)){
-                    echo "<tr>";
-                    echo "<td>" . $user['studentid'] . "</td>";
-                    echo "<td>" . $user['firstName'] . "</td>";
-                    echo "<td>" . $user['lastName'] . "</td>";
-                    echo "<td>" . $user['role'] . "</td>";
-                    echo "<td>" . $user['group'] . "</td>";
-                    echo "</tr>";
+                // Query to fetch only students from the same group, excluding teachers
+                $groupQuery = mysqli_query($conn, "SELECT * FROM `users` 
+                                                 WHERE `group` = '$userGroup' 
+                                                 AND role = 'student' 
+                                                 AND userName != '$userName'");
+
+                // Check if there are any other students in the group
+                if (mysqli_num_rows($groupQuery) > 0) {
+                    // Loop through and display each student in the same group
+                    while ($teammate = mysqli_fetch_array($groupQuery)) {
+                        echo "<tr>";
+                        echo "<td>" . $teammate['studentid'] . "</td>";
+                        echo "<td>" . $teammate['firstName'] . "</td>";
+                        echo "<td>" . $teammate['lastName'] . "</td>";
+                        echo "<td>" . $teammate['group'] . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    // Display message if no teammates are found
+                    echo "<tr><td colspan='4' style='text-align:center;'>You have no teammates in your group</td></tr>";
                 }
                 ?>
             </tbody>
         </table>
-      <a href="logout.php">Logout</a>
+
+        <a href="logout.php">Logout</a>
+
+        //------------------------------------------------------------------------------------------------------------------------
+        <div class="peer-evaluation" style="text-align:center; padding:20px;">
+    <h2>Peer Evaluation</h2>
+    <form method="POST" action="submit_evaluation.php">
+        <label for="studentid"><strong>Select Student:</strong></label>
+        <select name="studentid" required>
+            <?php
+            // Populate the dropdown with students in the same group
+            mysqli_data_seek($groupQuery, 0); // Reset the pointer of the result set
+            while ($teammate = mysqli_fetch_array($groupQuery)) {
+                echo "<option value='" . $teammate['studentid'] . "'>" . $teammate['firstName'] . " " . $teammate['lastName'] . "</option>";
+            }
+            ?>
+        </select>
+        <br><br>
+
+        <div class="evaluation-section">
+            <label><strong>Cooperation:</strong></label>
+            <select name="rating" required>
+                <option value="">Select Rating</option>
+                <?php for ($i = 1; $i <= 5; $i++): ?>
+                    <option value="<?= $i; ?>"><?= $i; ?></option>
+                <?php endfor; ?>
+            </select>
+            <textarea name="comment" placeholder="Optional comments for Cooperation" rows="4" style="width: 100%;"></textarea>
+        </div>
+
+        <div class="evaluation-section">
+            <label><strong>Conceptual Contribution:</strong></label>
+            <select name="rating1" required>
+                <option value="">Select Rating</option>
+                <?php for ($i = 1; $i <= 5; $i++): ?>
+                    <option value="<?= $i; ?>"><?= $i; ?></option>
+                <?php endfor; ?>
+            </select>
+            <textarea name="comment1" placeholder="Optional comments for Conceptual Contribution" rows="4" style="width: 100%;"></textarea>
+        </div>
+
+        <div class="evaluation-section">
+            <label><strong>Practical Contribution:</strong></label>
+            <select name="rating2" required>
+                <option value="">Select Rating</option>
+                <?php for ($i = 1; $i <= 5; $i++): ?>
+                    <option value="<?= $i; ?>"><?= $i; ?></option>
+                <?php endfor; ?>
+            </select>
+            <textarea name="comment2" placeholder="Optional comments for Practical Contribution" rows="4" style="width: 100%;"></textarea>
+        </div>
+
+        <div class="evaluation-section">
+            <label><strong>Work Ethic:</strong></label>
+            <select name="rating3" required>
+                <option value="">Select Rating</option>
+                <?php for ($i = 1; $i <= 5; $i++): ?>
+                    <option value="<?= $i; ?>"><?= $i; ?></option>
+                <?php endfor; ?>
+            </select>
+            <textarea name="comment3" placeholder="Optional comments for Work Ethic" rows="4" style="width: 100%;"></textarea>
+        </div>
+
+        <input type="submit" name="evalu" value="Submit Evaluation">
+    </form>
+</div>
+
+        //------------------------------------------------------------------------------------------------------------------------
+
+
     </div>
 </body>
+
 </html>

@@ -39,7 +39,17 @@
 -  User Authentication: Implement a login system with roles of students and instructors.
 -  Team Management: Functionality for instructors to create teams and assign students to specific groups and ensure teams are visible to both students and instructors.
 
-
+## Sprint 2 Features (Goals):
+- Exporting Data: Exporting a course roster from a CSV file.
+- Team Evaluation Features: Functionality for students to evaluate each other in the team base on assessment dimensions (Coorporation, Conceptual, Practical and Work Ethic) and an option to leave an optional comment boxes for additional feedback.
+- General Improvement: Debug and improve the application.
+  
 =======
 ## How to run the project (To be continued)
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+- Download the application code from the github.
+- Install and Setup XAMPP(https://www.apachefriends.org/) for the database.
+- Move the application code to C:\xampp\htdocs
+- Open XAMPP Control Panel, turn on Apache and MySQL
+- Open any browser (recommended: Google Chrome), then type: localhost/dashboard on the tab bar.
+- Then press on the phpMyAdmin on the dashboard,
+- xxxxxxxxxxxx

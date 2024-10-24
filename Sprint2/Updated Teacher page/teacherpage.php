@@ -10,11 +10,14 @@ include("connect.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Instructor's Homepage</title>
     <link rel="stylesheet" href="teacher_style.css">
+    <script src="script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <!--font-->
 </head>
 <body>
-
+  <!--welcome banner -->
     <div id = "welcome">
       <h2 id="welcome">
        Welcome <?php 
@@ -25,18 +28,22 @@ include("connect.php");
             echo $row['firstName'] . '!';
         }
        }
-       ?>
-      </h2>
+       ?> </h2>
+
       <h3 style=font-size:30px>Instructor Dashboard</h3>
       </div>
 
+      <!--content wrapper to display team assignment and table side by side-->
+
       <div class ="content-wrapper">
-      <div class="infotable">
+      <!--student information table all students-->
+      
+      <div class="infotable" id="infoTable">
       <h2 style = padding:12px;text-align:center>Student Information</h2>
-    
+
         <table id ="students">
             <thead>
-                <tr><!-- This code set up the header of the table -->
+                <tr>
                     <th>Team</th>
                     <th>Name</th>
                     <th>Student ID</th>
@@ -44,7 +51,6 @@ include("connect.php");
             </thead>
             <tbody>
                 <?php
-                // Fetch all users from the database and put them into the table
                 $allUsersQuery = mysqli_query($conn, "SELECT * FROM `users` WHERE `role` = 'student'");
                 
                 while($user = mysqli_fetch_array($allUsersQuery)){
@@ -57,54 +63,84 @@ include("connect.php");
                 ?>
             </tbody>
         </table>
-        <p>
-          choose specific team to view</br>
-          instructor could select button so that there are a number of tables, each table solely dedicated to a specific team</br>
-          select that individual table in order to see the current information on the teams peer assessments</br>
-          must be done after the team # info has been updated in database </br>
-        </p>
-    </div> <!--closing div for infotable-->
+        </div>
 
-    <div class="team-creation">
-        <h2 class="form-title">Create Teams</h2>
+
+        <!-- separate table for each team -->
+
+        <div class = "teamtable" id="teamTable">
+        <?php
+
+        $teamQuery = mysqli_query($conn, "SELECT DISTINCT team FROM `users` WHERE `role` = 'student'");
+        while ($teamRow = mysqli_fetch_array($teamQuery)) {
+          $teamNumber = $teamRow['team'];
+          
+          echo "<h3>Team $teamNumber</h3>";
+
+            echo "<table id='team-$teamNumber' ;'>
+                    
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th>Name</th>
+                            <th>Student ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>";
+            
+            $teamUsersQuery = mysqli_query($conn, "SELECT * FROM `users` WHERE `role` = 'student' AND `team` = '$teamNumber'");
+            while($user = mysqli_fetch_array($teamUsersQuery)){
+                echo "<tr>";
+                echo "<td>" . $user['team'] . "</td>";
+                echo "<td>" . $user['firstName'] . " " . $user['lastName'] . "</td>";
+                echo "<td>" . $user['studentid'] . "</td>";
+                echo "</tr>";
+            }
+            echo "</tbody></table>";
+        }
+        ?>
+    
+    </div>
+    
+
+    <div class="team-creation" id="teamCreation">
+        <h2 style=text-align:center;padding:10px>Create Teams</h2>
 
         <div class="assign-method">
         <form method="post" action="register.php">
-        <p>Assign Manually:</p>
+        <p style=font-weight:bold>Assign Manually</p>
 
         <div class="input-group">
-            <label for="fname">Enter Student's ID:</label> bn
-           <i class="fas fa-user"></i>
+            <label for="fname">Enter Student's ID:</label>
+            <i class="fas fa-user"></i>
            <input type="text" name="studentid" id="studentid" placeholder="Student Id" required>
-        </div> <!--closing div for input group-->
+        </div>
 
           <div class="input-group">
             <label for="userName">Enter the Student's Team Number:</label>
               <i class="fas fa-user"></i>
               <input type="number" step="1" name="team" id="team" placeholder="User Team" required min="1">
-          </div><!--closing div for input group-->
+          </div>
 
-        <div class = "links">
-		    <input type="submit" value="Assign Student">
-        </div><!--closing div for submit-->
-        <!-- this should send the info the register page. 
-        also, there is a way to make this automatically update which is what i want-->
+        <form method= post action = "register.php">
+          <button>Assign Student</button>
+        </form>
 
         </form>
 
-      </div> <!--closing div for assign-method-->
+      </div>
 
       <div class="assign-method">
-        <p>Upload class CSV file:</p>
-        <p>Under Construction</p>
-        <div class = "links">
-            <input type="submit" value ="Upload course roster">
-        </div><!--closing div for links-->
-      </div><!--closing div for assign-method-->
+        <p style= font-weight:bold>Upload class CSV file</p>
+        <form action="#">
+          <input type="file" id="myFile" name="filename">
+          <input type="submit">
+        </form>
+      </div>
 
-      </div><!--closing div for team creation-->
+      </div>
 
-    </div> <!--closing div for content wrapper-->
+    </div>
 
     <div class="logout">
       <form action="logout.php" method="get">
@@ -117,11 +153,6 @@ include("connect.php");
           <button class="button-3" role= "button" value = "Settings">Settings</button>
         </form>
       </div>
-
-      <!-- HTML !-->
-       <div id="button test">
-<button class="button-3" role="button">Button 3</button>
-</div>
 
 
 </body>

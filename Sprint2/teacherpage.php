@@ -93,6 +93,11 @@ include("connect.php");
                 ?>
             </tbody>
         </table>
+
+        <div style="text-align: center; margin-bottom: 20px;">
+            <a href="export_csv.php" class="btn" style="padding: 10px 20px; background-color: #c9d6ff; color: #4A4A73; text-decoration: none; border-radius: 5px;">Export to CSV</a>
+        </div>
+        </br>
         <a href="logout.php">Logout</a> <!-- Logout link -->
     </div>
 
@@ -114,4 +119,4 @@ include("connect.php");
     </div>
 </body>
 
-</html> 
+</html>

@@ -48,7 +48,7 @@ include("connect.php");
         while ($teamRow = mysqli_fetch_array($teamQuery)) {
           $teamNumber = $teamRow['team'];
 
-          echo "<h3>Team $teamNumber</h3>";
+          //echo "<h3>Team $teamNumber</h3>";
 
             echo "<table id='team-$teamNumber' ;'>
                     
@@ -56,6 +56,11 @@ include("connect.php");
                         <tr>
                             <th>Name</th>
                             <th>Student ID</th>
+                            <th>Cooperation Dimension</th>
+                            <th>Conceptual Contribution</th>
+                            <th>Practical Contribution</th>
+                            <th>Work Ethic</th>
+                            <th>Team</th>
                         </tr>
                     </thead>
                     <tbody>";
@@ -65,6 +70,11 @@ include("connect.php");
                 echo "<tr>";
                 echo "<td>" . $user['firstName'] . " " . $user['lastName'] . "</td>";
                 echo "<td>" . $user['studentid'] . "</td>";
+                echo "<td>" . $user['evalu'] . "</td>"; // Display Cooperation Dimension
+                echo "<td>" . $user['evalu1'] . "</td>"; // Display Conceptual Contribution
+                echo "<td>" . $user['evalu2'] . "</td>"; // Display Practical Contribution
+                echo "<td>" . $user['evalu3'] . "</td>"; // Display Work Ethic
+                echo "<td>" . $user["team"] . "</td>";
                 echo "</tr>";
             }
             echo "</tbody></table>";

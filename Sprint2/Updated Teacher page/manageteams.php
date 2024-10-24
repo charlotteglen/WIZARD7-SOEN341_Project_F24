@@ -70,7 +70,7 @@ include("connect.php");
         </div>
 
         <div class="team-creation" id="teamCreation">
-        <h2 style=text-align:center;padding:10px>Create Teams</h2>
+        <h2 style=text-align:center;padding:10px>Create or Change Teams</h2>
 
         <div class="assign-method">
         <form method="post" action="register.php">

@@ -54,7 +54,7 @@ include("connect.php");
             ?>
             !
         </p>
-        <h2>User Information Table</h2>
+        <h2>Students Information Table</h2>
 
         <table>
             <thead>

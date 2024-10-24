@@ -1,0 +1,123 @@
+/* styles.css */
+
+/* Global styling */
+body {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    /* Horizontal gradient background */
+    color: #4A4A73;
+    /* Dark lavender-grey text */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for table */
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    /* White table background */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #d3d3d3;
+    /* Light border color */
+}
+
+th {
+    background-color: #c9d6ff;
+    /* Light lavender-blue header */
+    color: #4A4A73;
+    font-weight: bold;
+}
+
+/* Main container */
+div {
+    text-align: center;
+    padding: 10%;
+}
+
+/* Welcome message styling */
+p {
+    font-size: 50px;
+    font-weight: bold;
+    color: #4A4A73;
+}
+
+/* Form container */
+.container {
+    margin: 30px auto;
+    width: 50%;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4A4A73;
+}
+
+/* Input group styling */
+.input-group {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #4A4A73;
+}
+
+.input-group input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    /* Light grey input background */
+    color: #4A4A73;
+}
+
+/* Button styling */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    background-color: #c9d6ff;
+    /* Light lavender-blue button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #a8b4ff;
+    /* Slightly darker lavender-blue on hover */
+}
+
+/* Anchor link styling */
+a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4A4A73;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

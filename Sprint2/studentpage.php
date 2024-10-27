@@ -34,6 +34,7 @@ include("connect.php"); // Include database connection
 
 <body>
     <div style="text-align:center; padding:15%;">
+    <a href="logout.php"><button id = "logoutbutton">Log out</button></a>
         <p style="font-size:50px; font-weight:bold;">
             Welcome student
             <?php
@@ -95,8 +96,6 @@ include("connect.php"); // Include database connection
             </tbody>
         </table>
 
-        <a href="logout.php">Logout</a>
-
         //------------------------------------------------------------------------------------------------------------------------
         <div class="peer-evaluation" style="text-align:center; padding:20px;">
     <h2>Peer Evaluation</h2>
@@ -113,8 +112,17 @@ include("connect.php"); // Include database connection
         </select>
         <br><br>
 
-        <div class="evaluation-section">
+        <div class="evaluation-section" id="cooperation-section">
             <label><strong>Cooperation:</strong></label>
+            <div class="card">
+                <br />
+                <span onclick="givestars(1, 'cooperation-section')" class="star">★</span>
+                <span onclick="givestars(2, 'cooperation-section')" class="star">★</span>
+                <span onclick="givestars(3, 'cooperation-section')" class="star">★</span>
+                <span onclick="givestars(4, 'cooperation-section')" class="star">★</span>
+                <span onclick="givestars(5, 'cooperation-section')" class="star">★</span>
+                <h3 id="output-cooperation">Rating is: 0/5</h3>
+            </div>
             <select name="rating" required>
                 <option value="">Select Rating</option>
                 <?php for ($i = 1; $i <= 5; $i++): ?>
@@ -124,8 +132,17 @@ include("connect.php"); // Include database connection
             <textarea name="comment" placeholder="Optional comments for Cooperation" rows="4" style="width: 100%;"></textarea>
         </div>
 
-        <div class="evaluation-section">
+        <div class="evaluation-section" id="contribution-section">
             <label><strong>Conceptual Contribution:</strong></label>
+            <div class="card">
+                <br />
+                <span onclick="givestars(1, 'contribution-section')" class="star">★</span>
+                <span onclick="givestars(2, 'contribution-section')" class="star">★</span>
+                <span onclick="givestars(3, 'contribution-section')" class="star">★</span>
+                <span onclick="givestars(4, 'contribution-section')" class="star">★</span>
+                <span onclick="givestars(5, 'contribution-section')" class="star">★</span>
+                <h3 id="output-contribution">Rating is: 0/5</h3>
+            </div>
             <select name="rating1" required>
                 <option value="">Select Rating</option>
                 <?php for ($i = 1; $i <= 5; $i++): ?>
@@ -135,8 +152,17 @@ include("connect.php"); // Include database connection
             <textarea name="comment1" placeholder="Optional comments for Conceptual Contribution" rows="4" style="width: 100%;"></textarea>
         </div>
 
-        <div class="evaluation-section">
+        <div class="evaluation-section" id="practical-section">
             <label><strong>Practical Contribution:</strong></label>
+            <div class="card">
+                <br />
+                <span onclick="givestars(1, 'practical-section')" class="star">★</span>
+                <span onclick="givestars(2, 'practical-section')" class="star">★</span>
+                <span onclick="givestars(3, 'practical-section')" class="star">★</span>
+                <span onclick="givestars(4, 'practical-section')" class="star">★</span>
+                <span onclick="givestars(5, 'practical-section')" class="star">★</span>
+                <h3 id="output-practical">Rating is: 0/5</h3>
+            </div>
             <select name="rating2" required>
                 <option value="">Select Rating</option>
                 <?php for ($i = 1; $i <= 5; $i++): ?>
@@ -146,8 +172,17 @@ include("connect.php"); // Include database connection
             <textarea name="comment2" placeholder="Optional comments for Practical Contribution" rows="4" style="width: 100%;"></textarea>
         </div>
 
-        <div class="evaluation-section">
+        <div class="evaluation-section" id="workethic-section">
             <label><strong>Work Ethic:</strong></label>
+            <div class="card">
+                <br />
+                <span onclick="givestars(1, 'workethic-section')" class="star">★</span>
+                <span onclick="givestars(2, 'workethic-section')" class="star">★</span>
+                <span onclick="givestars(3, 'workethic-section')" class="star">★</span>
+                <span onclick="givestars(4, 'workethic-section')" class="star">★</span>
+                <span onclick="givestars(5, 'workethic-section')" class="star">★</span>
+                <h3 id="output-workethic">Rating is: 0/5</h3>
+            </div>
             <select name="rating3" required>
                 <option value="">Select Rating</option>
                 <?php for ($i = 1; $i <= 5; $i++): ?>
@@ -165,6 +200,7 @@ include("connect.php"); // Include database connection
 
 
     </div>
+    <script src="studentpage.js"></script>
 </body>
 
 </html>

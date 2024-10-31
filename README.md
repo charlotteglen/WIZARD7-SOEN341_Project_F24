@@ -35,18 +35,18 @@
 <br/>Youveng Sor  SID:40222455  Github name: Youveng -> Backend Developer
 <br/>Minh Tien Vu SID:40044988  Github name: TimmyTwoTimes -> Backend Developer
 
-## Sprint 1 Features ([Goals:](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
+## Sprint 1 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
 -  User Authentication: Implement a login system with roles of students and instructors.
 -  Team Management: Functionality for instructors to create teams and assign students to specific groups and ensure teams are visible to both students and instructors.
 
-## Sprint 2 Features (Goals):
+## Sprint 2 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
 - Exporting Data: Exporting a evaluation data from a CSV file.
 - Team Evaluation Features: Functionality for students to evaluate each other in the team base on assessment dimensions (Coorporation, Conceptual, Practical and Work Ethic) and an option to leave an optional comment boxes for additional feedback.
 - General Improvement: Debug and improve the application.
 
-## Sprint 3 Features (Goals):
+## Sprint 3 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
 
-## Sprint 4 Features (Goals):
+## Sprint 4 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
 
 ## How to run the project (To be continued)
 - Download the application code from the github.

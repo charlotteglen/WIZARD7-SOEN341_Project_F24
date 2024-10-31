@@ -35,7 +35,7 @@
 <br/>Youveng Sor  SID:40222455  Github name: Youveng -> Backend Developer
 <br/>Minh Tien Vu SID:40044988  Github name: TimmyTwoTimes -> Backend Developer
 
-## Sprint 1 Features (Goals):
+## Sprint 1 Features ([Goals:](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
 -  User Authentication: Implement a login system with roles of students and instructors.
 -  Team Management: Functionality for instructors to create teams and assign students to specific groups and ensure teams are visible to both students and instructors.
 

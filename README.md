@@ -43,8 +43,11 @@
 - Exporting Data: Exporting a evaluation data from a CSV file.
 - Team Evaluation Features: Functionality for students to evaluate each other in the team base on assessment dimensions (Coorporation, Conceptual, Practical and Work Ethic) and an option to leave an optional comment boxes for additional feedback.
 - General Improvement: Debug and improve the application.
-  
-=======
+
+## Sprint 3 Features (Goals):
+
+## Sprint 4 Features (Goals):
+
 ## How to run the project (To be continued)
 - Download the application code from the github.
 - Install and Setup XAMPP(https://www.apachefriends.org/) for the database.
@@ -57,5 +60,3 @@
 ![image](https://github.com/user-attachments/assets/f9641d01-34a9-4d06-9f72-43bf7e654b34)
 
 
-
-- xxxxxxxxxxxx

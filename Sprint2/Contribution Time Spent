@@ -1,0 +1,70 @@
+US-6: Importing a Course Roster from a CSV File
+Issue#: US-6
+Responsible: Backend Team (Youveng, TimmyTwoTimes and Oceven)
+User Story Tasks:
+Develop functionality to parse and upload CSV files, Time Spent: 3 hours
+Implement student-to-group assignment logic based on CSV content, Time Spent: 3 hours
+
+
+US-7: Teammate Evaluation Interfaces (Front End)
+Issue#: US-7
+Responsible: Frontend Team (charlotteglen, jananaa & CbyRam)
+User Story Tasks:
+Design the front-end layout for teammate selection, Time Spent: 3 hours
+Ensure functionality for choosing team members for evaluation, Time Spent: 3 hours
+
+
+US-8 : Teammate Evaluation Interfaces (Back End)
+Issue#: US-8
+Responsible: Backend Team (Youveng, TimmyTwoTimes and Oceven)
+User Story Tasks:
+Develop backend services to handle teammate selection data, Time Spent: 5 hours
+Integrate with the front end, Time Spent: 3 hours
+
+
+US-9 : Ensure teams are visible to both students and instructors
+Issue#: US-9
+Responsible: Frontend Team (charlotteglen, jananaa & CbyRam)
+User Story Tasks:
+Implement front-end rating interface with a 5-point scale for cooperation, Time Spent: 5 hours
+
+
+US-10: Rating System for Cooperation Dimension (Back End)
+Issue#: US-10
+Responsible: Backend Team (Youveng, TimmyTwoTimes & Oceven)
+User Story Tasks:
+Set up backend logic to handle and store cooperation ratings, Time Spent: 5 hours
+
+
+US-11: Confirm Submission of Peer Assessment Page
+Issue#: US-11
+Responsible: All members
+User Story Tasks:
+Develop confirmation page for peer assessment submission, Time Spent: 2 hours
+
+US-13: Addition of Remaining Assessment Dimensions (Front End)
+Issue#: US-13
+Responsible: Frontend Team (charlotteglen, jananaa & CbyRam)
+User Story Tasks:
+Extend interface to include additional rating scales and comment boxes, Time Spent: 5 hours
+
+
+US-14: Addition of Remaining Assessment Dimensions (Back End)
+Issue#: US-14
+Responsible: Backend Team (Youveng, TimmyTwoTimes & Oceven)
+User Story Tasks:
+Update backend to handle and store additional dimensions and feedback comments, Time Spent: 7 hours
+
+
+US-15: Add Optional Comment Boxes for Each Dimension (Front End)
+Issue#: US-15
+Responsible: Frontend Team (charlotteglen, jananaa & CbyRam)
+User Story Tasks: 
+Design and implement optional comment boxes for each dimension, Time Spent: 4 hours
+
+
+US-16: Add Optional Comment Boxes for Each Dimension (Back End)
+Issue#: US-16
+Responsible: Backend Team (Youveng, TimmyTwoTimes & Oceven)
+User Story Tasks: 
+Develop backend support to save and retrieve comments, Time Spent: 5 hours

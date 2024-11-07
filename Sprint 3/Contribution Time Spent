@@ -1,0 +1,29 @@
+US-17: Creating the Dashboard for Teachers
+Issue#: US-17
+Responsible: Frontend Team (charlotteglen, jananaa & CbyRam)
+User Story Tasks:
+Develop dashboard layout, Time Spent: 3 hours
+Integrate data from the backend, Time Spent: 2.5 hours
+
+
+US-18: Data Retrieval and Filtering
+Issue#: US-18
+Responsible: Backend Team (Youveng, TimmyTwoTimes and Oceven)
+User Story Tasks:
+Retrieve and filter data methods, Time Spent: 3.5 hours
+Connect filtered data to tables, Time Spent: 3 hours
+
+US-19: Writing User Stories and Acceptance Tests
+Issue#: US-19
+Responsible: All members
+User Story Tasks:
+Document user stories in GitHub, Time Spent: 2 hours
+Develop acceptance tests (AT), Time Spent: 2.5 hours
+
+
+US-20: Unit Testing and Continuous Integration
+Issue#: US-20
+Responsible: All members
+User Story Tasks:
+Create unit tests for Sprint 1-2 features, Time Spent: 3 hours
+Set up continuous integration, Time Spent: 3 hours

@@ -1,0 +1,38 @@
+Attendees & ID:
+Charlotte Glen SID: 40166725 Github name: charlotteglen
+Ramiro Juarez SID: 40284034 Github name: CbyRam
+Jananaa Mahathevan SID: 40211352
+Oceane Rakotomalala SID:40226514 Github name: Oceven
+Youveng Sor  SID:40222455  Github name: Youveng
+Minh Tien Vu SID:40044988  Github name: TimmyTwoTimes
+
+
+Meeting Duration: ~3 hours
+Meeting Date: October 31, 2024
+Meeting Details:
+
+1. Review User Stories and Acceptance Criteria
+- Discussed user stories (US-17 to US-20) in detail to ensure everyone has a shared understanding.
+- Finalized the acceptance criteria for each story to ensure alignment with project requirements.
+
+2. Task Breakdown and Assignment
+- Identified the associated tasks for each user story and allocated them to team members.
+- Discussed the estimated time needed for each task and agreed on timelines.
+
+3. Technical Discussion
+- Front End: Discussed the implementation of the dashboard interface for teachers and data retrieval from the backend.
+- Back End: Reviewed the approach to connect and filter data, ensuring it meets user requirements.
+- Continuous Integration: Planned the unit tests and automated testing strategy for consistent quality assurance.
+
+4. Risk Assessment and Mitigation
+- Identified high and medium risks associated with the tasks and discussed ways to mitigate these risks.
+- Created a plan to address potential issues proactively.
+
+
+Points of the Meeting:
+
+- Reviewed the user stories (US-17 to US-20) and discussed their specific requirements.
+- Finalized the acceptance criteria for each user story.
+- Broke down associated tasks and estimated the time needed for each.
+- Discussed potential risks and their mitigation strategies for the sprint.
+- Developed a strategy for continuous integration and unit testing.

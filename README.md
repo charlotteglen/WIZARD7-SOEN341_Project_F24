@@ -57,6 +57,7 @@
 - Then press on the phpMyAdmin on the dashboard, then on the left handside click on New.
 - On the Database, below Create database name it login then press create. it will lead you to page that create the table.
 - Name the table users with 12 column, it lead you the page below and fill the table with exact same thingy in the figure below and click on save:
-![image](https://github.com/user-attachments/assets/f9641d01-34a9-4d06-9f72-43bf7e654b34)
+![image](https://github.com/user-attachments/assets/361aafe6-b1d6-46ce-bd20-3a8b93ba7ad7)
+
 
 

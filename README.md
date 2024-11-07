@@ -35,11 +35,28 @@
 <br/>Youveng Sor  SID:40222455  Github name: Youveng -> Backend Developer
 <br/>Minh Tien Vu SID:40044988  Github name: TimmyTwoTimes -> Backend Developer
 
-## Sprint 1 Features (Goals):
+## Sprint 1 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
 -  User Authentication: Implement a login system with roles of students and instructors.
 -  Team Management: Functionality for instructors to create teams and assign students to specific groups and ensure teams are visible to both students and instructors.
 
+## Sprint 2 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
+- Exporting Data: Exporting a evaluation data from a CSV file.
+- Team Evaluation Features: Functionality for students to evaluate each other in the team base on assessment dimensions (Coorporation, Conceptual, Practical and Work Ethic) and an option to leave an optional comment boxes for additional feedback.
+- General Improvement: Debug and improve the application.
 
-=======
+## Sprint 3 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
+
+## Sprint 4 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
+
 ## How to run the project (To be continued)
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+- Download the application code from the github.
+- Install and Setup XAMPP(https://www.apachefriends.org/) for the database.
+- Move the application code to C:\xampp\htdocs
+- Open XAMPP Control Panel, turn on Apache and MySQL
+- Open any browser (recommended: Google Chrome), then type: localhost/dashboard on the tab bar.
+- Then press on the phpMyAdmin on the dashboard, then on the left handside click on New.
+- On the Database, below Create database name it login then press create. it will lead you to page that create the table.
+- Name the table users with 12 column, it lead you the page below and fill the table with exact same thingy in the figure below and click on save:
+![image](https://github.com/user-attachments/assets/f9641d01-34a9-4d06-9f72-43bf7e654b34)
+
+

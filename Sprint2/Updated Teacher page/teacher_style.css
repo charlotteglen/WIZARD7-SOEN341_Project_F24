@@ -10,7 +10,7 @@
 body
 {
     background-color: #8a9e94;
-    background: #e2fff0;
+    background: #ffffff;
 }
 
 #welcome {
@@ -47,29 +47,36 @@ body
     color:white;
 }
 
-[id^="team-"] {
-    width:30%;
-    margin: auto;
+#teamTable {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));*/
+    grid-template-columns: 1fr;
+    grid-column-gap: 100px;
+    gap: 20px;
+    padding: 20px;
+}
+
+#teamTable table {
+    width: 100%;
     border-collapse: collapse;
-    text-align:left;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-[id^="team-"] td, [id^="team-"] th {
-    padding: 8px;
-    border: 1px solid black;
+#teamTable th, #teamTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
 }
 
-[id^="team-"] tr:nth-child(even){ background-color: #eafdf5; }
-
-[id^="team-"] tr:nth-child(odd){ background-color: #ffffff; }
-
-[id^="team-"] th{
-    padding-top:12px;
-    padding-bottom:12px;
+#teamTable th {
     background-color: #003C1F;
     color: white;
 }
 
+#teamTable tr:nth-child(even){ background-color: #eafdf5; }
+
+#teamTable tr:nth-child(odd){ background-color: #ffffff }
 
 .team-creation {
     text-align:left;

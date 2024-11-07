@@ -43,18 +43,6 @@ th {
     font-weight: bold;
 }
 
-/* Logout link styling */
-a {
-    margin-top: 20px;
-    text-decoration: none;
-    color: #4A4A73;
-    font-size: 18px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 /* Peer Evaluation Section */
 .peer-evaluation {
     text-align: center; /* Center text for the evaluation section */
@@ -66,6 +54,36 @@ a:hover {
 
 .evaluation-section {
     margin: 20px 0; /* Spacing between evaluation sections */
+}
+
+.card {
+    padding: 0%;
+}
+
+.star {
+    font-size: 10vh;
+    cursor: pointer;
+    transition: color 500ms;
+}
+
+.one {
+    color: rgb(255, 0, 0);
+}
+
+.two {
+    color: rgb(255, 106, 0);
+}
+
+.three {
+    color: rgb(251, 255, 120);
+}
+
+.four {
+    color: rgb(255, 255, 0);
+}
+
+.five {
+    color: rgb(24, 159, 14);
 }
 
 /* Textarea styling for comments */
@@ -91,10 +109,31 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #a8b4ff; /* Darker lavender-blue on hover */
+    box-shadow: 5px 5px 8px black;
 }
 
 /* General form styles */
 label {
     display: block; /* Each label on a new line */
     margin-bottom: 5px; /* Spacing below labels */
+}
+
+/* Logout link styling */
+#logoutbutton {
+    position: absolute;
+    background-color: #c9d6ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+#logoutbutton:hover{
+    background-color: #a8b4ff;    
+    text-decoration: underline;
+    box-shadow: 5px 5px 8px black;
 }

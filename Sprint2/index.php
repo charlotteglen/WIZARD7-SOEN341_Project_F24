@@ -30,7 +30,7 @@
         <div class="input-group">
             <i class="fas fa-user"></i>
             <input type="text" name="studentid" id="studentid" placeholder="Student Id" required>
-            <label for="studentid">Enter Student ID</label>
+            <label for="studentid">Enter ID</label>
         </div>
 
         <div class="input-group">

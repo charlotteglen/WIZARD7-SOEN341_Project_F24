@@ -45,9 +45,13 @@
 - General Improvement: Debug and improve the application.
 
 ## Sprint 3 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
-
+- Dashboard Development for Teachers: Implement a dashboard that allows teachers to view both summary and detailed assessment data.
+- Data Retrieval and Filtering: Enable efficient data retrieval and filtering from the database.
+  
 ## Sprint 4 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
-
+- Task List Creation for Students: Develop a functionality for instructors to create a task list for students.
+- Task List Management for Students: Allow students to view and edit their assigned task list.
+- 
 ## How to run the project (To be continued)
 - Download the application code from the github.
 - Install and Setup XAMPP(https://www.apachefriends.org/) for the database.

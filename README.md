@@ -51,7 +51,8 @@
 ## Sprint 4 Features ([Goals](https://github.com/charlotteglen/WIZARD7-SOEN341_Project_F24/wiki)):
 - Task List Creation for Students: Develop a functionality for instructors to create a task list for students.
 - Task List Management for Students: Allow students to view and edit their assigned task list.
-- 
+- Debug and Finalized the Project.
+
 ## How to run the project (To be continued)
 - Download the application code from the github.
 - Install and Setup XAMPP(https://www.apachefriends.org/) for the database.

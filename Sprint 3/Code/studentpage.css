@@ -1,0 +1,221 @@
+/* applies to all */
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Open Sans';
+}
+
+body
+{
+    background-color: #8a9e94;
+    background: #cccfc5;
+}
+
+#welcome {
+    font-size:40px;
+    font-weight:bold;
+    padding:12px;
+    text-align:center
+}
+
+#studentId {
+    font-size:20px;
+    font-weight:bold;
+    padding:0px;
+    text-align:center
+}
+
+/* container for specific team tables */
+#table-container {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* all tables with teamTable class */
+.teamTable {
+    width: 95%;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #f9f9f9;
+    table-layout: fixed;
+}
+
+.teamTable th, .teamTable td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+
+.teamTable tr:nth-child(even) { 
+    background-color: #eafdf5; 
+}
+
+.teamTable tr:nth-child(odd) { 
+    background-color: #ffffff; 
+}
+
+.teamTable tr:hover{
+    background-color: #f6fff2;
+}
+
+.teamTable th{
+    padding-top: 12px;
+    padding-bottom:12px;
+    background-color:#003C1F;
+    color:white;
+}
+
+/* team creation box */
+.team-creation {
+    text-align:left;
+}
+
+.input-group{
+    text-align:center;
+}
+
+.assign-method {
+    margin-bottom: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+}
+
+.container {
+    width: 50%;
+    align-content: center;
+}
+
+.logout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.settings {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+}
+
+textarea {
+    max-width: 50%;
+}
+
+/* Peer Evaluation Section */
+.peer-evaluation {
+    text-align: center; /* Center text for the evaluation section */
+    margin: 20px auto; /* Center the div */
+    padding: 20px;
+   justify-content: center;
+    border-radius: 8px;
+}
+
+.evaluation-section {
+    margin: 20px 0; /* Spacing between evaluation sections */
+}
+
+.card {
+    padding: 0%;
+}
+
+.star {
+    font-size: 10vh;
+    cursor: pointer;
+    transition: color 500ms;
+}
+
+.one {
+    color: rgb(255, 0, 0);
+}
+
+.two {
+    color: rgb(255, 106, 0);
+}
+
+.three {
+    color: rgb(251, 255, 120);
+}
+
+.four {
+    color: rgb(255, 255, 0);
+}
+
+.five {
+    color: rgb(24, 159, 14);
+}
+
+/* Textarea styling for comments */
+textarea {
+    height: 100px; /* Increased height for comment boxes */
+    width: 100%; /* Full width for text areas */
+    border: 1px solid #c9d6ff; /* Lavender border */
+    border-radius: 4px;
+    padding: 8px;
+}
+
+/* Input submit button styles */
+input[type="submit"] {
+    background-color: #006031;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 2px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 2px 10px;
+    position: relative;
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #003C1F;
+    box-shadow: 3px 3px 2px black;
+}
+
+/* General form styles */
+label {
+    display: block; /* Each label on a new line */
+    margin-bottom: 5px; /* Spacing below labels */
+}
+
+/* Logout link styling */
+#logoutbutton {
+    position: absolute;
+    background-color: #006031;
+    color: white;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 2px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    right: 10px;
+    top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    text-decoration: none;
+}
+#logoutbutton:hover{
+    background-color: #003C1F;
+    box-shadow: 3px 3px 2px black;
+}

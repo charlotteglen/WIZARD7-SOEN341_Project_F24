@@ -36,7 +36,7 @@ include("connect.php");
      <div class = "bg-img"></div>
         <div class = "bg"></div>
         <div class = "header">
-            <a href = "homepage.html">
+            <a href = "homepage.php">
                 <i class = "fas fa-user-circle"></i>
             </a>
             <h1> Peer Assessment </h1>

@@ -105,5 +105,20 @@ include("connect.php");
     </div>
 
 
+         <!-- CSV download button -->
+         <div class="csv-download" style="text-align:center; margin-top: 20px;">
+        <a href="export_csv.php" class="btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">Download CSV</a>
+    </div>
+    
+
+    <!-- CSV upload form -->
+    <div class="csv-upload" style="text-align:center; margin-top: 20px;">
+        <form action="upload_csv.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="csv_file" accept=".csv" required>
+            <button type="submit" class="btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">Upload CSV</button>
+        </form>
+    </div>
+    
+
 </body>
 </html>

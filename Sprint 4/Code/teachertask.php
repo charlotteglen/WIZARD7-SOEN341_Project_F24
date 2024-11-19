@@ -1,18 +1,28 @@
 <?php
+// Start the session
 session_start();
+
+// Include the database connection file
 include("connect.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Set the character encoding for the document -->
 <meta charset="UTF-8">
+
+    <!-- Set the viewport to ensure proper scaling on different devices -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <!-- Set the title of the page -->
         <title>Peer Assessment </title> 
+
         <!-- icons -->
         <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
         <!-- font -->
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'></title>
+        
         <!-- link reference for css -->
         <link rel="stylesheet" href = "homepage.css">
     <style>
@@ -32,6 +42,7 @@ include("connect.php");
     </style>
 </head>
 <body>
+
     <!-- header -->
     <div class = "bg-img"></div>
         <div class = "bg"></div>
@@ -51,6 +62,7 @@ include("connect.php");
             <a href = "teachertask.php"> <i class = "fas fa-tasks"></i> Task </a>
             <a href = "logout.php" class = "right"> Logout </a>
         </div>
+        
     <!-- Welcome message for the teacher -->
     <div style="text-align:center; padding:15%;">
         <p style="font-size:50px; font-weight:bold;">
@@ -80,7 +92,6 @@ include("connect.php");
     <div class="container" id="tasks">
         <h1 class="form-title">Task Management</h1>
         
-
         <!-- Form to Add a New Task -->
         <form method="post" action="register.php">
             <div class="input-group">
@@ -90,8 +101,6 @@ include("connect.php");
             <input type="submit" class="btn" value="Add Task" name="addTask">
         </form>
         
-
-
         <!-- Display Existing Tasks with Options to Mark Complete/Delete -->
         <h2>Existing Tasks</h2>
         <table>
@@ -136,7 +145,5 @@ include("connect.php");
         </table>
     </div>
 
-
-    
 </body>
 </html>

@@ -1,20 +1,33 @@
 <?php
+// Start the session
 session_start();
+
+// Include the database connection file
 include("connect.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Set the character encoding for the document -->
 <meta charset="UTF-8">
+
+    <!-- Set the viewport to ensure proper scaling on different devices -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            <!-- Set the title of the page -->
         <title>Peer Assessment </title> 
+        
         <!-- icons -->
         <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
         <!-- font -->
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'></title>
+        
         <!-- link reference for css -->
         <link rel="stylesheet" href = "homepage.css">
+
+        <!-- Internal CSS for table styling -->
     <style>
         table {
             width: 80%;
@@ -31,8 +44,8 @@ include("connect.php");
         }
     </style>
 </head>
-
 <body>
+    
      <!-- header -->
      <div class = "bg-img"></div>
         <div class = "bg"></div>
@@ -52,6 +65,7 @@ include("connect.php");
             <a href = "teachertask.php"> <i class = "fas fa-tasks"></i> Task </a>
             <a href = "logout.php" class = "right"> Logout </a>
         </div>
+
     <!-- Welcome message for the teacher -->
     <div style="text-align:center; padding:15%;">
         <p style="font-size:50px; font-weight:bold;">
@@ -71,6 +85,7 @@ include("connect.php");
             !
         </p>
         
+
         <!-- User Information Table -->
         <h2>User Information Table</h2>
         <table>
@@ -96,6 +111,7 @@ include("connect.php");
                 
                 while ($user = mysqli_fetch_array($allUsersQuery)) {
                     echo "<tr>";
+                    // Output the value of ' ' from the $user array inside a table cell, with HTML special characters converted to HTML entities
                     echo "<td>" . htmlspecialchars($user['studentid']) . "</td>";
                     echo "<td>" . htmlspecialchars($user['firstName']) . "</td>";
                     echo "<td>" . htmlspecialchars($user['lastName']) . "</td>";
@@ -117,6 +133,21 @@ include("connect.php");
         <br>
     </div>
 
+
+     <!-- CSV download button -->
+    <div class="csv-download" style="text-align:center; margin-top: 20px;">
+        <a href="export_csv.php" class="btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">Download CSV</a>
+    </div>
+    
+
+    <!-- CSV upload form -->
+    <div class="csv-upload" style="text-align:center; margin-top: 20px;">
+        <form action="upload_csv.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="csv_file" accept=".csv" required>
+            <button type="submit" class="btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">Upload CSV</button>
+        </form>
+    </div>
+    
     
 </body>
 </html>

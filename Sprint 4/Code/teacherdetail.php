@@ -1,19 +1,31 @@
 <?php
+// start
 session_start();
+
+// Include the database connection file
 include("connect.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Set the viewport to ensure proper scaling on different devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <!-- Set the title of the page -->
         <title>Peer Assessment </title> 
+
         <!-- icons -->
         <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
         <!-- font -->
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'></title>
+        
         <!-- link reference for css -->
         <link rel="stylesheet" href = "homepage.css">
+
+         <!-- Internal CSS for table styling -->
     <style>
         table {
             width: 80%;
@@ -31,8 +43,6 @@ include("connect.php");
     </style>
 </head>
 <body>
-
-
 
 <!-- header -->
 <div class = "bg-img"></div>
@@ -53,6 +63,9 @@ include("connect.php");
             <a href = "teachertask.php"> <i class = "fas fa-tasks"></i> Task </a>
             <a href = "logout.php" class = "right"> Logout </a>
         </div>
+        
+
+
 <div style="text-align:center; padding:15%;">
     <p style="font-size:50px; font-weight:bold;">
         Welcome Teacher 
@@ -85,8 +98,10 @@ include("connect.php");
             echo "<h3>Group: " . $currentGroup . "</h3>";
         }
 
+        
         echo "<p>Student Name: " . $user['firstName'] . " " . $user['lastName'] . "<br>";
         echo "Student ID: " . $user['studentid'] . "</p>";
+
 
         echo "<table>";
         echo "<thead>";
@@ -101,6 +116,9 @@ include("connect.php");
         echo "</thead>";
         echo "<tbody>";
         echo "<tr>";
+
+
+        // Output the value of 'evalu' from the $user array inside a table cell
         echo "<td>" . $user['evaluStu'] . "</td>";
         echo "<td>" . $user['evalu'] . "</td>";
         echo "<td>" . $user['evalu1'] . "</td>";
@@ -110,6 +128,7 @@ include("connect.php");
         echo "</tr>";
         echo "</tbody>";
         echo "</table>";
+
 
         // Display comments if available
         $comments = explode('<br><br>', $user['stuComment']);
@@ -123,16 +142,13 @@ include("connect.php");
         }
     }
 
+     // Close the last group section
     if ($currentGroup !== null) {
-        echo "</div>"; // Close the last group section
+        echo "</div>";
     }
     ?>
 
-
 </div>
-
-
-
 
 </body>
 </html>

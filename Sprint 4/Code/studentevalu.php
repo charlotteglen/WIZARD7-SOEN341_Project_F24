@@ -42,7 +42,7 @@ include("connect.php");
        <?php 
        if(isset($_SESSION['userName'])){
             $userName = $_SESSION['userName'];
-            $query = mysqli_query($conn, "SELECT users.* FROM users WHERE users.userName='$userName'");
+            $query = mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.userName='$userName'");
             $row = mysqli_fetch_array($query);
             echo $row['firstName'] . ' ' . $row['lastName']."! <br>";
             echo "ID: " . $row['studentid']; 

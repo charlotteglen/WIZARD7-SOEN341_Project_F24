@@ -88,13 +88,13 @@ if(isset($_POST['changeGroup'])){
 
 if (isset($_POST['evalu'])) {
     $studentid = $_POST['studentid'];
-    $evalu = (int)$_POST['rating'];
+    $evalu = (int)$_POST['cooperation'];
     $comment = $_POST['comment'];
-    $evalu1 = (int)$_POST['rating1'];
+    $evalu1 = (int)$_POST['contribution'];
     $comment1 = $_POST['comment1'];
-    $evalu2 = (int)$_POST['rating2'];
+    $evalu2 = (int)$_POST['practical'];
     $comment2 = $_POST['comment2'];
-    $evalu3 = (int)$_POST['rating3'];
+    $evalu3 = (int)$_POST['workethic'];
     $comment3 = $_POST['comment3'];
 
     // Calculate average of the current evaluation

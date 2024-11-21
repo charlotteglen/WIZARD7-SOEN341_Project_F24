@@ -50,7 +50,7 @@ include("connect.php");
             <a href = "studenttask.php"> <i class = "fas fa-tasks"></i> Task </a>
             <a href = "logout.php" class = "right"> Logout </a>
         </div>
-    <div style="text-align:center; padding:15%;">
+    <div style="text-align:center; padding-top:15%; padding-bottom: 15%;">
       <p style="font-size:50px; font-weight:bold;">
        Welcome student 
        <?php 

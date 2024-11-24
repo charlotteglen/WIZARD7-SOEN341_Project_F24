@@ -123,25 +123,24 @@
 }
 
 .student-section h3 {
-    text-align: center; /* Centers the group heading */
-    margin-bottom: 10px; /* Adds spacing between the heading and the table */
-    font-size: 1.5em; /* Optional: Adjust the font size for better readability */
-    font-weight: bold; /* Optional: Makes the heading stand out */
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 #student {
-    text-align: center; /* Centers any paragraph inside the student section */
-    margin: 10px 0; /* Adds some spacing */
+    text-align: center;
+    margin: 10px 0;
     font-weight:bold;
 }
 
 .comments {
-    margin-top: 20px; /* Space between table and comments */
+    margin-top: 20px;
     padding: 10px;
-    background-color: #f9f9f9; /* Optional: To match table styling */
-    border: 1px solid #ddd; /* Optional: To create a visual connection */
-    width: 80%; /* Same as table width */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    width: 80%;
     margin-left: auto;
-    margin-right: auto; /* Centers the comments */
+    margin-right: auto;
     text-align: left;
 }

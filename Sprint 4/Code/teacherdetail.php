@@ -1,3 +1,4 @@
+
 <?php
 // start
 session_start();
@@ -16,31 +17,13 @@ include("connect.php");
     <!-- Set the title of the page -->
         <title>Peer Assessment </title> 
 
-        <!-- icons -->
         <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        
-        <!-- font -->
-        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'></title>
-        
-        <!-- link reference for css -->
-        <link rel="stylesheet" href = "homepage.css">
 
-         <!-- Internal CSS for table styling -->
-    <style>
-        table {
-            width: 80%;
-            margin: auto;
-            border-collapse: collapse;
-            text-align: left;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'></title>
+
+        <link rel="stylesheet" href = "homepage.css">
+        <link rel="stylesheet" href="teacher_style.css">
+
 </head>
 <body>
 
@@ -48,7 +31,7 @@ include("connect.php");
 <div class = "bg-img"></div>
         <div class = "bg"></div>
         <div class = "header">
-            <a href = "homepage.html">
+            <a href = "homepage1.php">
                 <i class = "fas fa-user-circle"></i>
             </a>
             <h1> Peer Assessment </h1>
@@ -66,22 +49,23 @@ include("connect.php");
         
 
 
-<div style="text-align:center; padding:15%;">
+<div style="text-align:center;margin-bottom:30px;">
     <p style="font-size:50px; font-weight:bold;">
-        Welcome Teacher 
+        Welcome  
         <?php 
         if(isset($_SESSION['userName'])) {
             $userName = $_SESSION['userName'];
             $query = mysqli_query($conn, "SELECT * FROM `users` WHERE userName='$userName'");
             while($row = mysqli_fetch_array($query)) {
-                echo $row['firstName'].' '.$row['lastName'];
-                echo "<br>The detailed view";
+                echo $row['firstName'] . '!';
             }
         }
         ?>
-    !
     </p>
     <h2>Detailed View</h2>
+    </div>
+
+    <div id="studentTables">
 
     <?php
     // Fetch students sorted by group
@@ -95,18 +79,18 @@ include("connect.php");
             }
             $currentGroup = $user['team'];
             echo "<div class='student-section'>";
-            echo "<h3>Group: " . $currentGroup . "</h3>";
+            echo "<h3>Group " . $currentGroup . "</h3>";
         }
 
         
-        echo "<p>Student Name: " . $user['firstName'] . " " . $user['lastName'] . "<br>";
+        echo "<p id='student'>Student Name: " . $user['firstName'] . " " . $user['lastName'] . "<br>";
         echo "Student ID: " . $user['studentid'] . "</p>";
 
 
-        echo "<table>";
+        echo "<table class='teamTable'>";
         echo "<thead>";
         echo "<tr>";
-        echo "<th>Member</th>";
+        echo "<th>Evaluated By:</th>";
         echo "<th>Cooperation</th>";
         echo "<th>Conceptual</th>";
         echo "<th>Practical</th>";
@@ -130,19 +114,22 @@ include("connect.php");
         echo "</table>";
 
 
-        // Display comments if available
+        echo "<div class='comments'>";
+
         $comments = explode('<br><br>', $user['stuComment']);
-        echo "<h4>Comments:</h4>";
+        echo "<h4>Comments</h4>";
         foreach($comments as $comment) {
             if (!empty($comment)) {
                 echo "<p>$comment</p>";
             } else {
-                echo "<p>No comment </p>";
+                echo "<p>No comments</p>";
             }
+            echo "</br>";
         }
+        echo "</div>";
     }
 
-     // Close the last group section
+
     if ($currentGroup !== null) {
         echo "</div>";
     }

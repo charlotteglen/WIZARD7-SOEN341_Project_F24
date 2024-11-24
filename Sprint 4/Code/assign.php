@@ -15,22 +15,9 @@ include("connect.php");
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'></title>
         <!-- link reference for css -->
         <link rel="stylesheet" href = "homepage.css">
-    <style>
-        table {
-            width: 80%;
-            margin: auto;
-            border-collapse: collapse;
-            text-align: left;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+        <link rel="stylesheet" href="teacher_style.css"
 </head>
+
 <body>
      <!-- header -->
      <div class = "bg-img"></div>
@@ -51,74 +38,98 @@ include("connect.php");
             <a href = "teachertask.php"> <i class = "fas fa-tasks"></i> Task </a>
             <a href = "logout.php" class = "right"> Logout </a>
         </div>
+        
     <!-- Welcome message for the teacher -->
-    <div style="text-align:center; padding:15%;">
-        <p style="font-size:50px; font-weight:bold;">
-            Welcome Teacher 
+    <div id="welcome">
+        <h2 id="welcome">
+            Welcome 
             <?php 
             if (isset($_SESSION['userName'])) {
                 $userName = $_SESSION['userName'];
                 $query = mysqli_query($conn, "SELECT firstName, lastName FROM users WHERE userName='$userName'");
                 if ($query && $row = mysqli_fetch_array($query)) {
-                    echo htmlspecialchars($row['firstName'] . ' ' . $row['lastName']);
-                    echo "<br>Please assign a student to a group";
+                    echo htmlspecialchars($row['firstName'] . '!');
+                    //echo "<br>Please assign a student to a group";
                 } else {
                     echo "User not found.";
                 }
             }
             ?>
-            !
-        </p>
+        </h2>
+    </div>
         
-        <!-- User Information Table -->
-        <h2>User Information Table</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Student ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Role</th>
-                    <th>Group</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $allUsersQuery = mysqli_query($conn, "SELECT * FROM users WHERE role='student'");
-                
-                while ($user = mysqli_fetch_array($allUsersQuery)) {
-                    echo "<tr>";
-                    echo "<td>" . htmlspecialchars($user['studentid']) . "</td>";
-                    echo "<td>" . htmlspecialchars($user['firstName']) . "</td>";
-                    echo "<td>" . htmlspecialchars($user['lastName']) . "</td>";
-                    echo "<td>" . htmlspecialchars($user['role']) . "</td>";
-                    echo "<td>" . htmlspecialchars($user['team']) . "</td>";
-                    
-                    echo "</tr>";
-                }
-                ?>
-            </tbody>
-        </table>
-        
-        <br>
+<div class ="content-wrapper">
+    
+<div class="infotable" id="infoTable">
+<h2 style = padding:12px;text-align:center>Student Information</h2>
+    <table class="teamTable">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Group</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $allUsersQuery = mysqli_query($conn, "SELECT * FROM users WHERE role='student'");
+            
+            while ($user = mysqli_fetch_array($allUsersQuery)) {
+                echo "<tr>";
+                // Output the value of ' ' from the $user array inside a table cell, with HTML special characters converted to HTML entities
+                echo "<td>" . htmlspecialchars($user['studentid']) . "</td>";
+                echo "<td>" . htmlspecialchars($user['firstName']) . "</td>";
+                echo "<td>" . htmlspecialchars($user['lastName']) . "</td>";
+                echo "<td>" . htmlspecialchars($user['team']) . "</td>";
+                echo "</tr>";
+            }
+            ?>
+        </tbody>
+    </table>
+    
     </div>
 
-    <!-- Form to Assign Student to a Group -->
-    <div class="container" id="change">
-        <h1 class="form-title">Assigning a student to a Group:</h1>
-        <form method="post" action="register.php">
-            <div class="input-group">
-                <label for="studentid">Enter the Student ID:</label>
-                <input type="text" name="studentid" id="studentid" placeholder="Student ID" required>
-            </div>
-            <div class="input-group">
-                <label for="team">Enter the Student's group:</label>
-                <input type="text" name="team" id="team" placeholder="User Group" required>
-            </div>
-            <input type="submit" class="btn" value="Change" name="change">
-        </form>
+    <div class="team-creation" id="teamCreation">
+    <h2 style=text-align:center;padding:10px>Create or Change Teams</h2>
+
+    <div class="assign-method">
+    <form method="post" action="register.php">
+    <p style=font-weight:bold>Assign Manually</p>
+
+    <div class="input-group">
+        <label for="fname">Enter Student's ID:</label>
+        <i class="fas fa-user"></i>
+       <input type="text" name="studentid" id="studentid" placeholder="Student Id" required>
     </div>
+
+      <div class="input-group">
+        <label for="userName">Enter the Student's Team Number:</label>
+          <i class="fas fa-user"></i>
+          <input type="number" step="1" name="team" id="team" placeholder="User Team" required min="1">
+      </div>
+
+      <button value="Change" name="change" class="button-3">Assign Student</button>
+
+    </form>
+  </div>
+
+  <div class="assign-method">
+  <p style=font-weight:bold>Upload from class CSV file</p>
+    <form action="upload_csv.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="csv_file" accept=".csv" required>
+        <button type="submit" class="button-3">Upload</button>
+    </form>
+</div>
+
+  <div class="assign-method">
+    <p style=font-weight:bold>Download Class Information</p>
+    <a href="export_csv.php" class="button-3">Download</a>
+</div>
+
+  </div>
+
+</div>
 
 </body>
 </html>

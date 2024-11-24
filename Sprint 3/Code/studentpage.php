@@ -33,7 +33,7 @@ include("connect.php");
     <div id="table-container">
         <?php
         // Check if the student is assigned to a group
-        //testing the pipeline
+        //testing the pipeline number 2
         if(empty($studentGroup)) {
             echo "<h2>You are not yet assigned to a group.</h2>";
         } else {

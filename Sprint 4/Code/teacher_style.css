@@ -114,8 +114,14 @@
     padding: 20px;
 }
 
-.infotable, .container {
+.container {
     width: 50%;
+}
+
+.infotable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 /* container for specific team tables */

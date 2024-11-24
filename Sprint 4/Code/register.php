@@ -86,6 +86,7 @@ if(isset($_POST['changeGroup'])){
     }
 }
 
+//function of evalu button
 if (isset($_POST['evalu'])) {
     $studentid = $_POST['studentid'];
     $evalu = (int)$_POST['rating'];
@@ -103,6 +104,9 @@ if (isset($_POST['evalu'])) {
     // Evaluator's name
     $evaluFname = $_POST['evaluFname'];
     $evaluLname = $_POST['evaluLname'];
+    $evaluStu = "$evaluFname $evaluLname";
+    //Evaluator's ID
+    $evaluId = $_POST['evaluId'];
     $evaluStu = "$evaluFname $evaluLname";
 
     // Comments structure
@@ -144,7 +148,28 @@ if (isset($_POST['evalu'])) {
 
         // Calculate total average
         $totalEvalu = ($avgEvalu + $avgEvalu1 + $avgEvalu2 + $avgEvalu3) / 4;
+        // Create notification
+        $currentDate = date("Y-m-d");// getting the current date
+        $currentTime = date("H:i:s");//getting the current time
+        $notification = "Student ID: $evaluId evaluated student ID: $studentid on $currentDate at $currentTime.";
 
+
+        // Check if evaluator exists in the database
+        $checkEvaluator = "SELECT * FROM users WHERE studentid = '$evaluId'";
+        $evaluatorResult = $conn->query($checkEvaluator);
+
+        if ($evaluatorResult->num_rows > 0) {
+            $evaluator = $evaluatorResult->fetch_assoc();
+            $existingNoti = $evaluator['noti'] ? $evaluator['noti'] ."<br><br>" : "";
+            
+
+            // Append the new notification
+            $updateNotiQuery = "UPDATE users SET 
+                `noti` = CONCAT('$existingNoti', '$notification') 
+                WHERE studentid = '$evaluId'";
+
+            $conn->query($updateNotiQuery);
+        }
         // Update query to add evaluations and increment numComment
         $updateQuery = "UPDATE users SET 
             `evalu` = CONCAT('$existingEvalu', '$evalu'), 
@@ -163,9 +188,9 @@ if (isset($_POST['evalu'])) {
             WHERE studentid = '$studentid'";
 
         if ($conn->query($updateQuery) === TRUE) {
-            echo "Evaluation submitted successfully! <br> <a href='studentpage.php'>Return to the student page!</a>";
+            echo "Evaluation submitted successfully! <br> <a href='studentevalu.php'>Return to the evaluation page!</a>";
         } else {
-            echo "Error: Unable to assign the evaluation! <br> <a href='studentpage.php'>Return to the student page!</a>";
+            echo "Error: Unable to assign the evaluation! <br> <a href='studentevalu.php'>Return to the evaluation page!</a>";
         }
     } else {
         echo "Student ID not found!<br> <a href='studentevalu.php'>Return to the student's evaluation page!</a>";

@@ -60,6 +60,7 @@ include("connect.php");
             <a href = "teacherdetail.php"> <i class = "fas fa-users"></i> Detailed View </a>
             <a href = "assign.php"> <i class = "fas fa-pencil-square"></i> Group Setting </a>
             <a href = "teachertask.php"> <i class = "fas fa-tasks"></i> Task </a>
+            <a href = "noti.php"> <i class = "fas fa-bell"></i> Notification </a>
             <a href = "logout.php" class = "right"> Logout </a>
         </div>
         

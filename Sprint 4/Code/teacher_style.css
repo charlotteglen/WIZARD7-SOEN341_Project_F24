@@ -118,19 +118,30 @@
     width: 50%;
 }
 
-.infotable {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+.student-section {
+    margin-bottom: 50px;
 }
 
-/* container for specific team tables */
-#table-container {
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    width: 100%;
-    margin: auto;
-    border-collapse: collapse;
+.student-section h3 {
+    text-align: center; /* Centers the group heading */
+    margin-bottom: 10px; /* Adds spacing between the heading and the table */
+    font-size: 1.5em; /* Optional: Adjust the font size for better readability */
+    font-weight: bold; /* Optional: Makes the heading stand out */
+}
+
+#student {
+    text-align: center; /* Centers any paragraph inside the student section */
+    margin: 10px 0; /* Adds some spacing */
+    font-weight:bold;
+}
+
+.comments {
+    margin-top: 20px; /* Space between table and comments */
+    padding: 10px;
+    background-color: #f9f9f9; /* Optional: To match table styling */
+    border: 1px solid #ddd; /* Optional: To create a visual connection */
+    width: 80%; /* Same as table width */
+    margin-left: auto;
+    margin-right: auto; /* Centers the comments */
     text-align: left;
 }

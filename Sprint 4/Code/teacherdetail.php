@@ -50,20 +50,22 @@ include("connect.php");
         
 
 
-<div style="text-align:center;margin-bottom:30px;">
-    <p style="font-size:50px; font-weight:bold;">
-        Welcome  
-        <?php 
-        if(isset($_SESSION['userName'])) {
-            $userName = $_SESSION['userName'];
-            $query = mysqli_query($conn, "SELECT * FROM `users` WHERE userName='$userName'");
-            while($row = mysqli_fetch_array($query)) {
-                echo $row['firstName'] . '!';
+        <div id="welcome">
+        <h2 id="welcome">
+            Welcome 
+            <?php 
+            if (isset($_SESSION['userName'])) {
+                $userName = $_SESSION['userName'];
+                $query = mysqli_query($conn, "SELECT firstName, lastName FROM users WHERE userName='$userName'");
+                if ($query && $row = mysqli_fetch_array($query)) {
+                    echo htmlspecialchars($row['firstName'] . '!');
+                    echo "<br>Class Overview";
+                } else {
+                    echo "User not found.";
+                }
             }
-        }
-        ?>
-    </p>
-    <h2>Detailed View</h2>
+            ?>
+        </h2>
     </div>
 
     <div id="studentTables">

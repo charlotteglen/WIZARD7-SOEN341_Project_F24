@@ -59,7 +59,7 @@ include("connect.php");
                 $query = mysqli_query($conn, "SELECT firstName, lastName FROM users WHERE userName='$userName'");
                 if ($query && $row = mysqli_fetch_array($query)) {
                     echo htmlspecialchars($row['firstName'] . '!');
-                    echo "<br>Class Overview";
+                    echo "<br>Detailed View";
                 } else {
                     echo "User not found.";
                 }

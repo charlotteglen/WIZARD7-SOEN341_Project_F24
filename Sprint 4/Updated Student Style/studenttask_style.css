@@ -1,0 +1,29 @@
+/* student task style */
+
+.border
+{
+    border-radius: 10px;
+    margin-left: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 90%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+button
+{
+    margin-top: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 10%;
+    background: #003c1f;
+    color: white;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+button:hover {
+    background: #498066;
+  }

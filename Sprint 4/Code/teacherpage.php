@@ -71,7 +71,7 @@ include("connect.php");
     </div>
 
     
-    <div class="infotable" id="infoTable">
+    <div>
         <table class="teamTable">
             <thead>
                 <tr>

@@ -21,6 +21,9 @@ jobs:
         with:
           php-version: "7.4"
 
+      - name: Navigate to composer.json directory
+        run: cd 'Test Action Code'
+
       - name: Validate composer.json and composer.lock
         run: composer validate
 

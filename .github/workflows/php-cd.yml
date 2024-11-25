@@ -1,15 +1,12 @@
-name: PHP CI
+name: PHP CD
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,15 +18,10 @@ jobs:
         with:
           php-version: "7.4"
 
-      - name: Validate composer.json and composer.lock
-        run: composer validate
-
       - name: Install dependencies
         run: composer install --no-progress --prefer-dist
 
-      - name: Run PHP lint
+      - name: Deploy application
         run: |
-          find . -name "*.php" -print0 | xargs -0 -n1 -P4 php -l
-
-      - name: Run PHPUnit tests
-        run: vendor/bin/phpunit --configuration phpunit.xml
+          echo "Deploying application..."
+          # Add your deployment scripts/commands here

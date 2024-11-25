@@ -102,7 +102,7 @@ while ($user = mysqli_fetch_array($allUsersQuery))
 {
     $class_name = "card";
     echo '<div class = "'. $class_name .'">';
-    echo '<img src = "https://icons.veryicon.com/png/o/miscellaneous/icon-icon-of-ai-intelligent-dispensing/login-user-name-1.png" alt = "user" width = "100%" >';
+    echo '<img src = "https://icones.pro/wp-content/uploads/2022/07/icones-d-administration-vert.png" alt = "user" width = "100%" >';
 
     $class_name = "container";
     echo '<div class = "'. $class_name .'">';

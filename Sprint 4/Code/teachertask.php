@@ -25,6 +25,7 @@ include("connect.php");
         
         <!-- link reference for css -->
         <link rel="stylesheet" href = "homepage.css">
+        <link rel="stylesheet" href="teacher_style.css">
     <style>
         table {
             width: 80%;
@@ -65,33 +66,29 @@ include("connect.php");
         </div>
         
     <!-- Welcome message for the teacher -->
-    <div style="text-align:center; padding:15%;">
-        <p style="font-size:50px; font-weight:bold;">
-            Welcome Teacher 
+    <div id="welcome">
+        <h2 id="welcome">
+            Welcome 
             <?php 
             if (isset($_SESSION['userName'])) {
                 $userName = $_SESSION['userName'];
                 $query = mysqli_query($conn, "SELECT firstName, lastName FROM users WHERE userName='$userName'");
                 if ($query && $row = mysqli_fetch_array($query)) {
-                    echo htmlspecialchars($row['firstName'] . ' ' . $row['lastName']);
-                    echo "<br>Creating Student's Task";
+                    echo htmlspecialchars($row['firstName'] . '!');
+                    echo "<br>Class Overview";
                 } else {
                     echo "User not found.";
                 }
             }
             ?>
-            !
-        </p>
-        
-        
-        
-        
+        </h2>
     </div>
 
 
+    <div class ="content-wrapper">
     <!-- Task Management Section -->
-    <div class="container" id="tasks">
-        <h1 class="form-title">Task Management</h1>
+    <div class="taskAssignment">
+        <h2 class="form-title">Create New Task</h2>
         
         <!-- Form to Add a New Task -->
         <form method="post" action="register.php">
@@ -101,8 +98,11 @@ include("connect.php");
             </div>
             <input type="submit" class="btn" value="Add Task" name="addTask">
         </form>
-        
+        </div>
+
+        <div class="existingTasks">
         <!-- Display Existing Tasks with Options to Mark Complete/Delete -->
+         
         <h2>Existing Tasks</h2>
         <table>
             <thead>
@@ -144,6 +144,8 @@ include("connect.php");
                 ?>
             </tbody>
         </table>
+    </div>
+
     </div>
 
 </body>

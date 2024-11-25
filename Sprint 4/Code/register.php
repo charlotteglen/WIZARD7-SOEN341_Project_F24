@@ -77,12 +77,12 @@ if(isset($_POST['changeGroup'])){
         $updateGroup = "UPDATE users SET `team` = '$team' WHERE studentid = '$studentid'";
 
         if($conn->query($updateGroup) === TRUE){
-            echo "Group assigned successfully! <br> <a href='teacherpage.php'>Return to the teacher page! </a></br>";
+            echo "Group assigned successfully! <br> <a href='assign.php'>Return! </a></br>";
         } else {
-            echo "Error Unable to change student group! <br> <a href='teacherpage.php'>Return to the teacher page! </a></br>";
+            echo "Error Unable to change student group! <br> <a href='assign.php'>Return! </a></br>";
         }
     } else {
-        echo "Student ID not found!<br> <a href='teacherpage.php'>Return to the teacher page! </a></br>";
+        echo "Student ID not found!<br> <a href='assign.php'>Return! </a></br>";
     }
 }
 

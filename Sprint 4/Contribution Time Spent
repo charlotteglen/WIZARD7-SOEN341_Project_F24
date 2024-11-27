@@ -1,11 +1,31 @@
-US-21: Creating a task list for students
+US-19: Creating a task list for students
 Issue#: US-21
-Responsible: Backend Team (Youveng and TimmyTwoTimes)
+Responsible: All members
 User Story Tasks:
 Develop a feature that allows instructors to create and manage a list of tasks for their students, Time Spent 6hrs. 
 
-US-22: Allow students to view list
+US-22: Allow students to view the list
 Issue#: US-22
-Responsible: Backend Team (Youveng and TimmyTwoTimes)
+Responsible: All members
 User Story Tasks:
-Implement the feature for student, Time Spent: 2 hours
+Implement the feature for students, Time Spent: 2 hours
+
+US-21: Debugging
+Issue#: US-21
+Responsible: All members
+User Story Tasks:
+Debugging the project Time Spent: 2 hours
+
+US-22: Create and implement Notification
+Issue#: US-22
+Responsible: All members
+User Story Tasks:
+Create and implement notifications as well as connect to the database
+Time Spent: 3 hours
+
+US-23: Create and implement view count
+Issue#: US-22
+Responsible: All members
+User Story Tasks:
+Create and implement the view count as well as connect to the database
+Time Spent: 1 hours

@@ -1,0 +1,101 @@
+/* homepage styling */
+
+/* applies to all */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+/* header title */
+.header
+{
+    z-index: 2;
+    padding: 50px;
+    text-align: center;
+    color: #003C1F;
+    font-size: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header icon */
+.header i
+{
+    margin-right: 20px;
+    font-size: 50px;
+    color: #003C1F;
+}
+
+/* header backgroung image*/
+.bg-img
+{
+    z-index: 1;
+    height: 168px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('https://cdn.pixabay.com/photo/2023/09/17/19/10/building-8259184_1280.jpg'); opacity: 0.5;
+    background-size: cover;  
+}
+
+/* navbar */
+.navbar
+{
+    overflow: hidden;
+    background-color: #003C1F;
+}
+
+.navbar a
+{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar i
+{
+    margin-right: 5px;
+}
+
+.navbar a:hover
+{
+    background-color: rgb(210, 210, 210);
+    color: #003C1F;
+}
+
+/* logout */
+.navbar a.right
+{
+    float: right;
+}
+
+/* home */
+.home
+{
+    margin-top: 30px;
+}
+
+.instructions
+{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 0 auto;
+}
+
+.home h2
+{
+    color: #003C1F;
+    border-bottom: 2px solid #003C1F;
+}
